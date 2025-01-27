@@ -12,6 +12,9 @@
     --clr-primary-font: #fff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
@@ -325,13 +328,6 @@ footer {
     position: relative;
     top: 2px;
     width: 30px;
-}
-
-@media (width <=1200px) {
-    .partners-cards-section {
-        grid-template-columns: repeat(2, 1fr);
-        grid-row-gap: 15px;
-    }
 }
 
 @media (width <=830px) {

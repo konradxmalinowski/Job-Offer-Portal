@@ -9,7 +9,6 @@
     --clr-primary-font: #fff;
 }
 
-
 .welcome-section {
     width: 100%;
     height: auto;
@@ -36,6 +35,8 @@
     margin: 8px 0px 20px 0px;
     color: var(--clr-font-2);
 }
+
+/* offers - searching, daily offer */
 
 .offers-button {
     background-color: var(--clr-primary);
@@ -168,7 +169,7 @@ form {
     display: grid;
     column-gap: 40px;
     row-gap: 70px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     justify-content: center;
 }
 
@@ -199,6 +200,8 @@ form {
         left: 5%;
     }
 }
+
+
 
 button {
     padding: 10px;
@@ -259,10 +262,6 @@ button {
     background-color: var(--clr-primary-400);
     height: auto;
     padding: 80px 0;
-}
-
-.partners-section {
-    background-color: var(--clr-primary-200);
 }
 
 .day-offer-card {
@@ -327,6 +326,28 @@ button {
     }
 }
 
+
+/* medians of earnings */
+
+.median-earnings {
+    width: 70%;
+    min-height: 300px;
+    margin: 80px auto;
+    display: flex;
+    background-color: var(--clr-primary-200);
+}
+
+.median-earnings img {
+    filter: drop-shadow(0 0 3px var(--clr-primary-font));
+}
+
+
+/* about partners */
+
+.partners-section {
+    background-color: var(--clr-primary-200);
+}
+
 .partners-cards-section {
     width: 90%;
     display: grid;
@@ -365,6 +386,8 @@ button {
     margin: 0 30px;
 }
 
+/* users reviews */
+
 .reviews-section {
     display: flex;
     justify-content: center;
@@ -394,6 +417,7 @@ button {
     padding: 15px;
     border-radius: 8px;
     font-size: 15px;
+    word-wrap: break-word;
 }
 
 .reviewer-name {
@@ -409,6 +433,20 @@ button {
     transition: opacity 0.2s ease-in-out;
 }
 
+
+@media (width <=1200px) {
+    .partners-cards-section {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 15px;
+    }
+}
+
+@media (width <=830px) {
+    .partners-cards-section {
+        grid-template-columns: 1fr;
+        grid-row-gap: 15px;
+    }
+}
 
 @keyframes zoomIn {
     from {

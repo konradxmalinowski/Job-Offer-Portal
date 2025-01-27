@@ -1,8 +1,16 @@
 const navbar = document.querySelector('.navbar');
 const navbarButton = document.querySelector('.navbar-button');
-
 const langSet = document.querySelector('.lang-set');
 const langlist = document.querySelector('.lang-list');
+const offersWrapper = document.querySelector('.offers-wrapper');
+const loadMoreButton = document.querySelector('.load-more-button');
+const findOffersButton = document.querySelector('.search-button');
+const searchInputs = document.querySelectorAll('.search-inputs');
+const answers = document.querySelectorAll('.answers');
+const customLists = document.querySelectorAll('.custom-list');
+const selects = document.querySelectorAll('.select');
+
+let searchFilters = [];
 
 // FIXME: create function fetchLanguages, get all HTML elements with content to translate
 function changeLanguage() {
@@ -41,31 +49,8 @@ function toggleClass() {
 
 langSet.onclick = toggleLang;
 navbarButton.onclick = toggleClass
-
-
-
-
-// offers searching and loading
-// ------------------
-
-const offersWrapper = document.querySelector('.offers-wrapper');
-const loadMoreButton = document.querySelector('.load-more-button');
-const offers = document.querySelectorAll('.offer');
-const findOffersButton = document.querySelector('.search-button');
-
-const searchInputs = document.querySelectorAll('.search-inputs');
-let searchFilters = [];
-const selects = document.querySelectorAll('.select');
-const customLists = document.querySelectorAll('.custom-list');
-const answers = document.querySelectorAll('.answers');
-
-async function loadOffers(max, place, companyName, jobName) {
-    offers.forEach((offer) => offer.remove());
-    jobName ??= '';
-    place ??= '';
-    companyName ??= '';
-
-    console.log(max, place, companyName, jobName);
+async function loadOffers(max, place = '', companyName = '', jobName = '') {
+    offersWrapper.innerHTML = '';
 
     try {
         const response = await fetch('./list_of_offers-en.json');
@@ -73,23 +58,20 @@ async function loadOffers(max, place, companyName, jobName) {
             throw new Error(`HTTP error. Status: ${response.status}`);
         }
         const data = await response.json();
-        data.forEach((offer, idx) => {
-            if (idx < max) {
 
-                // && offer.place.includes(place) && offer.companyName.includes(companyName) && offer.name.includes(jobName)
-                console.log(offer.name.includes(jobName));
-                console.log(offer.companyName.includes());
-                console.log(offer.name.includes(jobName));
-                //  && offer.name === name
-                console.log(offer);
-
+        data
+            .filter((offer, idx) =>
+                idx < max &&
+                (place === '' || offer.place.toLowerCase().includes(place.toLowerCase())) &&
+                (companyName === '' || offer.companyName.toLowerCase().includes(companyName.toLowerCase())) &&
+                (jobName === '' || offer.name.toLowerCase().includes(jobName.toLowerCase()))
+            )
+            .forEach((offer, idx) => {
                 const offerDiv = document.createElement('div');
                 offerDiv.classList.add('offer', `offer${idx + 1}`);
-
                 offerDiv.addEventListener("mouseover", () => {
                     offerDiv.style.animation = "zoomIn .3s ease-in-out 1 normal forwards";
                 });
-
                 offerDiv.addEventListener("mouseout", () => {
                     offerDiv.style.animation = "zoomOut .3s ease-in-out 1 normal forwards";
                 });
@@ -98,74 +80,77 @@ async function loadOffers(max, place, companyName, jobName) {
                 name.textContent = offer.name;
                 name.style.fontWeight = '700';
 
-                const companyName = document.createElement('p');
-                companyName.textContent = offer.companyName;
-                companyName.style.fontWeight = '600';
-                companyName.style.fontSize = '17px';
+                const companyNameElem = document.createElement('p');
+                companyNameElem.textContent = offer.companyName;
+                companyNameElem.style.fontWeight = '600';
+                companyNameElem.style.fontSize = '17px';
 
                 const employmentType = document.createElement('p');
                 employmentType.textContent = offer.employmentType;
                 employmentType.style.color = 'var(--clr-grey)';
 
-                const place = document.createElement('p');
-                place.textContent = offer.place;
+                const placeElem = document.createElement('p');
+                placeElem.textContent = offer.place;
 
                 const button = document.createElement('button');
                 button.textContent = 'Apply';
 
-                offerDiv.appendChild(name);
-                offerDiv.appendChild(employmentType);
-                offerDiv.appendChild(companyName);
-                offerDiv.appendChild(place);
-                offerDiv.appendChild(button);
+                offerDiv.append(name, employmentType, companyNameElem, placeElem, button);
                 offersWrapper.appendChild(offerDiv);
-            }
-        });
+            });
     } catch (error) {
         console.error('Error loading offers:', error);
     }
 }
+
+loadMoreButton.addEventListener('click', () => {
+    searchFilters = [
+        answers[2]?.textContent.trim() || '',
+        answers[1]?.textContent.trim() || '',
+        answers[0]?.textContent.trim() || '',
+    ];
+
+    loadOffers(12, searchFilters[0], searchFilters[1], searchFilters[2]);
+});
+
+findOffersButton.addEventListener('click', () => {
+    findOffersButton.addEventListener('click', () => {
+        searchFilters = [
+            answers[2]?.textContent.trim() || '',
+            answers[1]?.textContent.trim() || '',
+            answers[0]?.textContent.trim() || '',
+        ];
+
+
+        loadOffers(12, searchFilters[0], searchFilters[1], searchFilters[2]);
+    });
+});
 
 window.addEventListener('DOMContentLoaded', () => {
     loadOffers(12);
 });
 
 loadMoreButton.addEventListener('click', (event) => {
-    loadOffers(100);
+    searchFilters = Array.from(answers).map(answer => answer.textContent.trim() || '');
+    loadOffers(12, searchFilters[0], searchFilters[1], searchFilters[2]);
     event.target.style.display = 'none';
 });
 
+
 searchInputs.forEach((searchInput, idx) => {
     searchInput.addEventListener('click', () => {
-        if (window.getComputedStyle(customLists[idx]).display === 'block') {
-            customLists[idx].style.display = 'none';
-        } else {
-            customLists[idx].style.display = 'block';
-        }
+        customLists[idx].style.display = customLists[idx].style.display === 'block' ? 'none' : 'block';
     });
 });
 
 selects.forEach(select => {
     select.addEventListener('click', () => {
         if (select.classList.contains('custom-list1-select')) {
-            answers[0].textContent = select.textContent;
+            answers[0].textContent = select.textContent.trim();
+        } else if (select.classList.contains('custom-list2-select')) {
+            answers[1].textContent = select.textContent.trim();
+        } else if (select.classList.contains('custom-list3-select')) {
+            answers[2].textContent = select.textContent.trim();
         }
-        else if (select.classList.contains('custom-list2-select')) {
-            answers[1].textContent = select.textContent;
-        }
-        else if (select.classList.contains('custom-list3-select')) {
-            answers[2].textContent = select.textContent;
-        }
-    })
-});
-
-findOffersButton.addEventListener('click', () => {
-    searchFilters = [];
-    answers.forEach(answer => {
-        searchFilters.push(answer.textContent);
     });
-    console.log(searchFilters);
-
-    loadOffers(12, ...searchFilters);
-
 });

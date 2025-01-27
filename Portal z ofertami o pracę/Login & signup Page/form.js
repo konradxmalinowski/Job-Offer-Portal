@@ -3,7 +3,7 @@ const registerWrapper2 = document.querySelector('.create-account2');
 const continueButton = document.querySelector('#continue-button');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('.password');
-const createAccountButton = document.querySelector('#password');
+const createAccountButton = document.querySelector('#create-account-button');
 
 continueButton.onclick = function () {
     if (emailInput.value != '') {
