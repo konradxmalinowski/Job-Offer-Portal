@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+    <link rel="stylesheet" href="../common_styles.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../common_js.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <section class="narrow-section">
+        <div class="lang-set">
+          <img src="../common images/poland.png" alt="polish-flag" />
+          <img src="../common images/arrow-down.png" alt="arrow-down" />
+          <div class="lang-list">
+            <div>
+              <img src="../Common images/poland.png" alt="PLflag" /> Polski
+            </div>
+            <div>
+              <img src="../Common images/english.png" alt="ENflag" /> English
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="wide-section">
+        <nav>
+          <ul class="nav-horizontal-list">
+            <li><a href="#" class="nav-option">Partnerzy</a></li>
+            <li><a href="#" class="nav-option">O nas</a></li>
+            <li><a href="#" class="nav-option">Oferty pracy</a></li>
+            <li><a href="#" class="nav-option">Kreator CV</a></li>
+            <li><a href="#" class="nav-option">Opinie</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="narrow-section">
+        <a href="" class="login-button button-inside-style">Zaloguj</a>
+        <a href="" class="register-button button-inside-style">Zarejestruj</a>
+      </section>
+
+      <button class="navbar-button">
+        <img
+          src="../common images/menu-bar-icon.png"
+          alt="menu-bar-icon"
+          class="menu-bar-icon"
+        />
+      </button>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Partnerzy</a></li>
+          <li><a href="#">O nas</a></li>
+          <li><a href="#">Oferty pracy</a></li>
+          <li><a href="#">Kreator CV</a></li>
+          <li><a href="#">Opinie</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="welcome-section">
+        <h1>Najlepsze oferty</h1>
+        <h3>od najlepszych pracodawców</h3>
+        <button class="offers-button">Przejdź</button>
+      </section>
+
+      <section class="search-section">
+        <p class="header-text">Tutaj znajdziesz swoją wymarzoną pracę</p>
+        <div class="searching-bar">
+          <form action="" method="post">
+            <div class="search-inputs search-inputs1">
+              <span class="answers answer1"></span>
+              <!-- Stanowisko... -->
+              <div class="custom-list custom-list1">
+                <div class="select custom-list1-select">Store Assistant</div>
+                <div class="select custom-list1-select">Cashier</div>
+                <div class="select custom-list1-select">Courier</div>
+                <div class="select custom-list1-select">Train Operator</div>
+                <div class="select custom-list1-select">Store Clerk</div>
+              </div>
+            </div>
+            <div class="search-inputs search-inputs2">
+              <span class="answers answer2"></span>
+              <!-- Firma... -->
+              <div class="custom-list custom-list2">
+                <div class="select custom-list2-select">Biedronka</div>
+                <div class="select custom-list2-select">Inpost</div>
+                <div class="select custom-list2-select">Lidl</div>
+                <div class="select custom-list2-select">PKP Cargo</div>
+                <div class="select custom-list2-select">McDonald's</div>
+              </div>
+            </div>
+            <div class="search-inputs search-inputs3">
+              <span class="answers answer1"></span>
+              <!-- Lokalizacja... -->
+              <div class="custom-list custom-list3">
+                <div class="select custom-list3-select">Warsaw</div>
+                <div class="select custom-list3-select">Kraków</div>
+                <div class="select custom-list3-select">Gdynia</div>
+                <div class="select custom-list3-select">Kielce</div>
+                <div class="select custom-list3-select">Lublin</div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <button class="search-button">
+          <img src="../common images/search.png" alt="search-img" /> &nbsp;
+          Szukaj
+        </button>
+      </section>
+
+      <div class="offers-zone-wrapper">
+        <h1>Offers Zone</h1>
+        <div class="offers-wrapper"></div>
+        <button class="load-more-button">
+          Load more
+          <img src="../Common images/arrow-right.png" alt="arrow right" />
+        </button>
+      </div>
+
+      <section class="wrapper offers-section">
+        <p class="header-text">Oferty dnia</p>
+
+        <section class="daily-offers">
+          <article class="day-offer-card">
+            <ul class="day-offer-list">
+              <li>Kierownik</li>
+              <li>Umowa o pracę</li>
+              <li>Lidl</li>
+              <li>Łódź, Zduńska Wola, Sieradz</li>
+            </ul>
+
+            <div class="apply-button-section">
+              <a href="" class="apply-button">Aplikuj</a>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <section class="wrapper partners-section">
+        <p class="header-text">Nasi partnerzy</p>
+        <section class="partners-cards-section">
+          <article class="partner-card">
+            Amazon <img src="../common images/Amazon.png" alt="Amazon" />
+          </article>
+          <article class="partner-card">
+            Biedronka
+            <img src="../common images/biedronka.png" alt="Biedronka" />
+          </article>
+          <article class="partner-card">
+            McDonald
+            <img src="../common images/McDonald's.png" alt="McDonald" />
+          </article>
+          <article class="partner-card">
+            Lidl <img src="../common images/Lidl.png" alt="Lidl" />
+          </article>
+          <article class="partner-card">
+            InPost <img src="../common images/InPost.png" alt="InPost" />
+          </article>
+          <article class="partner-card">
+            PKP Cargo <img src="../common images/PKPcargo.png" alt="PKPcargo" />
+          </article>
+        </section>
+      </section>
+
+      <section id="reviews-section" class="reviews-section">
+        <p class="header-text">Opinie użytkowników</p>
+
+        <section class="review-cards-section">
+          <section class="reviews-column">
+            <article class="review-card">
+              <span class="reviewer-name">Janusz:</span> Byłem sceptycznie
+              nastawiony do odkurzaczy po wprowadzeniu europejskich norm mocy
+              silników. W przypadku Electroluxa zupełnie niepotrzebnie. Moc
+              ssania dostosowuje się do powierzchnia na której aktualnie
+              pracuje. Zależało mi na odkurzaczu dla alergika więc dużego wyboru
+              nie było. Odkurzacz jest super cichy, spokojnie można rozmawiać
+              przy jego pracy. Przy minimalnej mocy ssania praktycznie
+              niesłyszalny. Szkoda że producent nie przewidział schowków na
+              ssawki.
+            </article>
+
+            <article class="review-card">
+              <span class="reviewer-name">Krzysztof:</span>
+              #opiniamotywowananagrodą Odkurzacz jest naprawdę cichutki. Lekki i
+              poręczny. Dodatkowo design naprawdę cieszy oko. Sprawdza zarówno
+              na podłogach jak i dywanach. Funkcja Smart jest naprawdę super.
+              Uchroniła przed wciągnięciem skarpetki :)
+            </article>
+            <article class="review-card">
+              <span class="reviewer-name">Konrad:</span> Zakupiony odkurzacz
+              zdecydowanie spełnia moje oczekiwania! Jest niezwykle wydajny,
+              cichy i łatwy w obsłudze. Jego moc ssania sprawia, że sprzątanie
+              staje się szybkie i efektywne, a różne końcówki umożliwiają
+              dotarcie do trudno dostępnych miejsc. Zdecydowanie polecam
+              każdemu, kto szuka solidnego i funkcjonalnego sprzętu do
+              utrzymania czystości w domu. #opiniamotywowananagrodą
+            </article>
+          </section>
+          <section class="reviews-column">
+            <article class="review-card">
+              <span class="reviewer-name">Marek:</span> Jestem zadowolony.
+              Zachwyca cicha praca, ciąg jest wystarczający. Słowem: to jest to!
+              Jeśli mnie przeżyje i wytrzyma jak poprzedni Elektroluks 15 lat -
+              czy można oczekiwać więcej?
+            </article>
+            <article class="review-card">
+              <span class="reviewer-name">Anna:</span> Jesteśmy po raz kolejny
+              miłe zaskoczeni odkurzaczem electrolux jest super cichy , funkcja
+              smart mega przydatna przy połączonych panelach z dywanem przełącza
+              się na dywan lub panele sterowanie w rączce tez fajny pomysł
+              bezprzewodowy dużo lżejsze od poprzednika szczotka zwrotna jedyny
+              minus mała szczotka która jest połączona z rączka mało wygodne ale
+              tak super
+            </article>
+            <article class="review-card">
+              <span class="reviewer-name">Szymon:</span> Polecam zakup w 100%.
+              Obecna wersja jest jeszcze cichsza, lżejsza i o niebo bardziej
+              przyjazna domownikom Dzięki jeszcze cichszej pracy. Posiadam
+              jeszcze starszą wersję z silnikiem 650W i 58db ale .... no właśnie
+              starszy model niby mocniejszy ale głośniejszy i słabiej wciągający
+              brud a na domiar ma koła mix plastik/guma przez co zdecydowanie
+              ciężej jeździł robiąc przy tym więcej hałasu. Na plus również w
+              nowej wersji jest zdecydowanie bogatszy pakiet startowy.
+              #opiniamotywowananagrodą
+            </article>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <section class="upper-section">
+        <ul class="nav-horizontal-list">
+          <li>
+            <a href="#" class="nav-option footer-image"
+              ><img src="../common images/X.png" alt="x icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#" class="nav-option footer-image"
+              ><img src="../common images/instagram.png" alt="instagram icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#" class="nav-option footer-image"
+              ><img src="../common images/yt.png" alt="yt icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#" class="nav-option footer-image"
+              ><img src="../common images/linkedin.png" alt="linkedin icon"
+            /></a>
+          </li>
+        </ul>
+      </section>
+      <section class="bottom-section">
+        <ul class="nav-horizontal-list">
+          <li><a href="" class="nav-option">Godziny dostępności</a></li>
+          <li><a href="" class="nav-option">Prywatność</a></li>
+          <li><a href="" class="nav-option">Warunki</a></li>
+          <li><a href="" class="nav-option">Deweloperzy</a></li>
+          <li><a href="#reviews-section" class="nav-option">Opinie</a></li>
+        </ul>
+      </section>
+    </footer>
+  </body>
+</html>

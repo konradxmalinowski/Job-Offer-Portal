@@ -1,0 +1,431 @@
+:root {
+    --clr-primary: #003d2b;
+    --clr-primary-400: #222529;
+    --clr-primary-300: #343842;
+    --clr-primary-200: #272a2e;
+    --clr-grey: grey;
+    --clr-font: black;
+    --clr-font-2: whitesmoke;
+    --clr-primary-font: #fff;
+}
+
+
+.welcome-section {
+    width: 100%;
+    height: auto;
+    min-height: calc(50svh - 40px);
+    background-color: var(--clr-primary-400);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+.welcome-section h1 {
+    font-size: 72px;
+    font-weight: 600;
+    color: var(--clr-font-2);
+    filter: drop-shadow(2px 2px 4px var(--clr-grey));
+    text-align: center;
+}
+
+.welcome-section h3 {
+    font-weight: 300;
+    opacity: 90%;
+    margin: 8px 0px 20px 0px;
+    color: var(--clr-font-2);
+}
+
+.offers-button {
+    background-color: var(--clr-primary);
+    height: 35px;
+    width: 100px;
+    border-radius: 30px;
+    color: var(--clr-font-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    padding: 23px;
+
+    &:hover {
+        width: 140px;
+    }
+}
+
+.search-section {
+    background-color: var(--clr-primary-200);
+    width: 100%;
+    height: auto;
+    min-height: 50svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0;
+    border-radius: 10px;
+}
+
+form {
+    margin: 30px 0;
+    display: flex;
+}
+
+.search-inputs {
+    height: 50px;
+    width: 25vw;
+    padding: 10px;
+    border: 1px solid var(--clr-font);
+    position: relative;
+    background-color: var(--clr-primary-300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-list {
+    position: absolute;
+    width: 20vw;
+    height: 270px;
+    background-color: var(--clr-primary-300);
+    top: 55px;
+    border-radius: 8px;
+    z-index: 3;
+    display: none;
+    padding: 20px;
+}
+
+.custom-list>* {
+    width: 100%;
+    height: calc(100% / 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+
+    &:hover {
+        background-color: var(--clr-primary-200);
+    }
+}
+
+
+.search-inputs p {
+    color: var(--clr-font-2);
+    opacity: 80%;
+}
+
+.search-inputs:nth-child(1) {
+    border-radius: 8px 0px 0px 10px;
+}
+
+.search-inputs:nth-child(3) {
+    border-radius: 0px 8px 8px 0px;
+}
+
+.search-button {
+    background-color: var(--clr-primary);
+    height: 35px;
+    width: 130px;
+    padding: 23px;
+    border-radius: 30px;
+    color: var(--clr-font-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover {
+        width: 170px;
+        transition: width 0.2s ease-in-out;
+    }
+}
+
+.search-button img {
+    width: 20px;
+    opacity: 70%;
+    z-index: 1;
+}
+
+.offers-zone-wrapper {
+    width: 100%;
+    height: auto;
+    background-color: var(--clr-primary-500);
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.offers-zone-wrapper>h1 {
+    margin-bottom: 80px;
+    font-size: 40px;
+}
+
+.offers-wrapper {
+    width: 70%;
+    display: grid;
+    column-gap: 40px;
+    row-gap: 70px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+}
+
+.offer {
+    height: 300px;
+    min-width: 300px;
+    background-color: var(--clr-primary-200);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    border-radius: 10px;
+
+    &::before {
+        content: 'Super offer';
+        width: 90px;
+        height: 20px;
+        font-size: 15px;
+        padding: 5px;
+        text-align: center;
+        border-radius: 20px;
+        background-color: var(--clr-primary);
+        color: var(--clr-primary-font);
+        position: absolute;
+        top: -6%;
+        left: 5%;
+    }
+}
+
+button {
+    padding: 10px;
+    background-color: var(--clr-primary);
+    color: var(--clr-primary-font);
+    font-weight: 700;
+    font-size: 17px;
+    border: none;
+    border-radius: 15px;
+    width: 100px;
+    margin: 10px auto 0 auto;
+    opacity: 0.8;
+
+    &:is(:active, :hover) {
+        opacity: 1;
+    }
+}
+
+.load-more-button {
+    width: 200px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 7px;
+}
+
+.load-more-button img {
+    width: 30px;
+}
+
+
+.header-text {
+    margin-bottom: 60px;
+    color: var(--clr-primary-font);
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.wrapper {
+    font-weight: 600;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 0;
+}
+
+
+.daily-offers {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.offers-section {
+    background-color: var(--clr-primary-400);
+    height: auto;
+    padding: 80px 0;
+}
+
+.partners-section {
+    background-color: var(--clr-primary-200);
+}
+
+.day-offer-card {
+    height: 380px;
+    width: 320px;
+    background-color: var(--clr-primary-200);
+    color: var(--clr-font-2);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 30px;
+}
+
+.day-offer-list {
+    list-style: none;
+}
+
+.day-offer-list li {
+    font-size: 22px;
+    opacity: 70%;
+    text-align: start;
+    margin: 20px 0;
+}
+
+.day-offer-list li:nth-child(1) {
+    font-size: 38px;
+    font-weight: 700;
+    opacity: 80%;
+    color: var(--clr-primary-font);
+}
+
+.day-offer-list li:nth-child(2) {
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 60%;
+}
+
+.apply-button-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.apply-button {
+    background-color: var(--clr-primary);
+    height: 35px;
+    width: 130px;
+    padding: 20px;
+    border-radius: 30px;
+    color: var(--clr-font-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        width: 160px;
+        opacity: 80%;
+    }
+}
+
+.partners-cards-section {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 35px;
+    justify-items: center;
+}
+
+.partner-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    min-width: 320px;
+    height: 230px;
+    background-color: var(--clr-primary-400);
+    color: var(--clr-font-2);
+    opacity: 85%;
+    font-size: 24px;
+    border-radius: 8px;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        font-size: 28px;
+        transform: scale(1.05);
+        color: var(--clr-primary-font);
+        font-weight: 700;
+        transition: all 0.2s ease-in;
+    }
+}
+
+.partner-card img {
+    width: 75px;
+    margin: 0 30px;
+}
+
+.reviews-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--clr-primary-400);
+    padding: 80px 0;
+}
+
+.review-cards-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.reviews-column {
+    width: 50%;
+}
+
+.review-card {
+    color: var(--clr-font-2);
+    margin: 25px 0;
+    background-color: var(--clr-primary-300);
+    opacity: 70%;
+    width: 35vw;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.reviewer-name {
+    color: var(--clr-primary-font);
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+    opacity: 90%;
+}
+
+.review-card:hover {
+    opacity: 100%;
+    transition: opacity 0.2s ease-in-out;
+}
+
+
+@keyframes zoomIn {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1.05);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}

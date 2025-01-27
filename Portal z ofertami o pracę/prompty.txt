@@ -1,0 +1,154 @@
+// **1**
+Stwórz mi taką listę dla pracowników firm: Biedronka, LIdl, inpost, pkp cargo, McDonald's: [
+  {
+    "id": 1,
+    "companyName": "Biedronka",
+    "Requirements": "",
+    "employmentType": "",
+    "place": "(remote, stationary -> Warszawa, Kraków, etc)",
+    "salary": "",
+    "daysOfWork": "pn-pt",
+    "benefits": "sports classes, retirement program",
+    "otherInformation": ""
+  }
+]
+
+// **2**
+Jeszcze 7
+
+// **3**
+Teraz przetłumacz tylko treść na język angielski. 
+Moja lista to: [
+  {
+    "id": 1,
+    "companyName": "Biedronka",
+    "Requirements": "Chęć do pracy, dyspozycyjność, umiejętność pracy w zespole",
+    "employmentType": "Umowa o pracę / Umowa zlecenie",
+    "place": "Stacjonarnie -> Warszawa, Kraków, Poznań, inne miasta",
+    "salary": "4500-5500 PLN brutto",
+    "daysOfWork": "pn-pt, możliwe soboty",
+    "benefits": "Dofinansowanie do karty sportowej, pakiet medyczny, bony świąteczne",
+    "otherInformation": "Możliwość awansu, szkolenia wprowadzające"
+  },
+  {
+    "id": 2,
+    "companyName": "Lidl",
+    "Requirements": "Dyspozycyjność, doświadczenie mile widziane, uczciwość",
+    "employmentType": "Umowa o pracę",
+    "place": "Stacjonarnie -> Wrocław, Gdańsk, Warszawa, inne lokalizacje",
+    "salary": "4500-7000 PLN brutto",
+    "daysOfWork": "pn-nd, praca zmianowa",
+    "benefits": "Karta sportowa, ubezpieczenie zdrowotne, rabaty pracownicze",
+    "otherInformation": "Dostęp do nowoczesnych technologii w pracy"
+  },
+  {
+    "id": 3,
+    "companyName": "InPost",
+    "Requirements": "Prawo jazdy kat. B, podstawowa znajomość obsługi smartfonów",
+    "employmentType": "Umowa o pracę / kontrakt B2B",
+    "place": "Stacjonarnie -> Warszawa, Łódź, inne miasta",
+    "salary": "5000-8000 PLN brutto",
+    "daysOfWork": "pn-pt, możliwe soboty",
+    "benefits": "System premiowy, karta sportowa, program emerytalny",
+    "otherInformation": "Praca w dynamicznie rozwijającej się firmie"
+  },
+  {
+    "id": 4,
+    "companyName": "PKP Cargo",
+    "Requirements": "Gotowość do pracy w terenie, uprawnienia wymagane dla stanowiska",
+    "employmentType": "Umowa o pracę",
+    "place": "Stacjonarnie -> Katowice, Szczecin, inne miasta",
+    "salary": "5000-9000 PLN brutto",
+    "daysOfWork": "pn-pt",
+    "benefits": "Pakiet socjalny, program emerytalny, szkolenia zawodowe",
+    "otherInformation": "Praca w stabilnej firmie z tradycjami"
+  },
+  {
+    "id": 5,
+    "companyName": "McDonald's",
+    "Requirements": "Chęć do nauki, umiejętność pracy pod presją czasu",
+    "employmentType": "Umowa o pracę / Umowa zlecenie",
+    "place": "Stacjonarnie -> Warszawa, Kraków, inne lokalizacje",
+    "salary": "23-26 PLN brutto/h",
+    "daysOfWork": "pn-nd, praca zmianowa",
+    "benefits": "Elastyczne godziny pracy, posiłki w trakcie zmiany, karta sportowa",
+    "otherInformation": "Możliwość rozwoju na stanowiskach kierowniczych"
+  },
+  {
+    "id": 6,
+    "companyName": "Biedronka",
+    "Requirements": "Gotowość do pracy fizycznej, uczciwość, umiejętność pracy zespołowej",
+    "employmentType": "Umowa o pracę / Umowa zlecenie",
+    "place": "Stacjonarnie -> Gdańsk, Rzeszów, inne lokalizacje",
+    "salary": "4300-5200 PLN brutto",
+    "daysOfWork": "pn-pt, możliwe weekendy",
+    "benefits": "Pakiet medyczny, bony świąteczne, zniżki pracownicze",
+    "otherInformation": "Możliwość udziału w programie lojalnościowym dla pracowników"
+  },
+  {
+    "id": 7,
+    "companyName": "Lidl",
+    "Requirements": "Dokładność, sumienność, umiejętność obsługi klienta",
+    "employmentType": "Umowa o pracę",
+    "place": "Stacjonarnie -> Białystok, Toruń, inne miasta",
+    "salary": "4600-7200 PLN brutto",
+    "daysOfWork": "pn-nd, praca zmianowa",
+    "benefits": "Karta sportowa, szkolenia rozwojowe, ubezpieczenie zdrowotne",
+    "otherInformation": "Praca w międzynarodowej sieci handlowej"
+  },
+  {
+    "id": 8,
+    "companyName": "InPost",
+    "Requirements": "Samodzielność, odpowiedzialność, prawo jazdy kat. B",
+    "employmentType": "Umowa zlecenie / kontrakt B2B",
+    "place": "Stacjonarnie -> Gdynia, Kielce, inne lokalizacje",
+    "salary": "5000-7500 PLN brutto",
+    "daysOfWork": "pn-pt, możliwe soboty",
+    "benefits": "Premie uznaniowe, karta sportowa, dofinansowanie do ubezpieczenia",
+    "otherInformation": "Możliwość pracy w terenie"
+  },
+  {
+    "id": 9,
+    "companyName": "PKP Cargo",
+    "Requirements": "Uprawnienia kolejowe, doświadczenie w pracy technicznej mile widziane",
+    "employmentType": "Umowa o pracę",
+    "place": "Stacjonarnie -> Gdańsk, Lublin, inne miasta",
+    "salary": "5200-8500 PLN brutto",
+    "daysOfWork": "pn-pt",
+    "benefits": "Pakiet socjalny, szkolenia zawodowe, program emerytalny",
+    "otherInformation": "Praca w stabilnej firmie o ugruntowanej pozycji"
+  },
+  {
+    "id": 10,
+    "companyName": "McDonald's",
+    "Requirements": "Punktualność, pozytywne podejście, gotowość do pracy zmianowej",
+    "employmentType": "Umowa o pracę / Umowa zlecenie",
+    "place": "Stacjonarnie -> Szczecin, Opole, inne lokalizacje",
+    "salary": "23-28 PLN brutto/h",
+    "daysOfWork": "pn-nd, praca zmianowa",
+    "benefits": "Posiłki pracownicze, karta sportowa, elastyczny grafik",
+    "otherInformation": "Możliwość rozwoju w strukturach firmy"
+  },
+  {
+    "id": 11,
+    "companyName": "Biedronka",
+    "Requirements": "Zaangażowanie, gotowość do pracy fizycznej, dyspozycyjność",
+    "employmentType": "Umowa o pracę",
+    "place": "Stacjonarnie -> Szczecin, Łódź, inne miasta",
+    "salary": "4500-5700 PLN brutto",
+    "daysOfWork": "pn-pt, możliwe soboty",
+    "benefits": "Bony świąteczne, karta sportowa, szkolenia wdrożeniowe",
+    "otherInformation": "Praca w największej sieci detalicznej w Polsce"
+  },
+  {
+    "id": 12,
+    "companyName": "Lidl",
+    "Requirements": "Sumienność, umiejętność pracy pod presją czasu",
+    "employmentType": "Umowa o pracę",
+    "place": "Stacjonarnie -> Warszawa, Kraków, inne miasta",
+    "salary": "4800-7000 PLN brutto",
+    "daysOfWork": "pn-nd, praca zmianowa",
+    "benefits": "Pakiet medyczny, rabaty pracownicze, dofinansowanie do kursów",
+    "otherInformation": "Możliwość awansu w ramach struktury firmy"
+  }
+]
