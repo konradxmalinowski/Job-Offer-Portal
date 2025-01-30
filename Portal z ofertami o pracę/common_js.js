@@ -1,6 +1,6 @@
-window.addEventListener('DOMContentLoaded', () => {
-    console.clear();
-})
+// window.addEventListener('DOMContentLoaded', () => {
+//     console.clear();
+// })
 
 const forms = document.querySelectorAll('form');
 forms.forEach((form) => {

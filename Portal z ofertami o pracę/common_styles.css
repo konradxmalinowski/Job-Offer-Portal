@@ -5,10 +5,10 @@
     --clr-primary-400: #222529;
     --clr-primary-300: #343842;
     --clr-primary-200: #272a2e;
-    --clr-primary-100: #0fc5b0;
-    --clr-grey: #4c585b;
+    --clr-grey: grey;
     --clr-font: black;
     --clr-font-2: whitesmoke;
+    --clr-font-3: #979EB1;
     --clr-primary-font: #fff;
 }
 
@@ -31,9 +31,17 @@ html {
     color: var(--clr-primary-100);
 }
 
+.grey {
+    color: var(--clr-font-3);
+}
+
 .block {
     display: block;
     margin-bottom: 10px;
+}
+
+.star {
+    color: red;
 }
 
 .underlined {
@@ -64,6 +72,7 @@ header {
     border-bottom: 1px solid var(--clr-primary-300);
     backdrop-filter: blur(3px);
     box-shadow: 1px 0 5px var(--clr-font);
+    font-weight: 700;
 }
 
 .narrow-section {
