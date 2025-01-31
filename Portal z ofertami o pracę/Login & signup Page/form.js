@@ -1,6 +1,6 @@
 const registerWrapper1 = document.querySelector('.create-account1');
 const registerWrapper2 = document.querySelector('.create-account2');
-const continueButton = document.querySelector('#continue-button');
+const continueButton = document.getElementById('continue-button');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('.password');
 const createAccountButton = document.querySelector('#create-account-button');
