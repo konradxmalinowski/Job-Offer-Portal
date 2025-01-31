@@ -10,6 +10,11 @@
     --clr-primary-font: #fff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* welcome section */
 .welcome-section {
     width: 100%;
     height: auto;
@@ -39,7 +44,6 @@
 
 
 /* offers - searching, daily offer */
-
 .offers-button {
     background-color: var(--clr-primary);
     height: 35px;
@@ -250,9 +254,19 @@ button {
     padding: 80px 0;
 }
 
+
+/* daily offers */
+.daily-offers-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+    overflow-x: hidden;
+    transition: all ease-in-out .5s 0s;
+}
+
 .daily-offers {
     display: flex;
-    justify-content: space-evenly;
 }
 
 .offers-section {
@@ -262,7 +276,7 @@ button {
 }
 
 .day-offer-card {
-    height: 380px;
+    height: 400px;
     width: 320px;
     background-color: var(--clr-primary-200);
     color: var(--clr-font-2);

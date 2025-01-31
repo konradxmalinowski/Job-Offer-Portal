@@ -1,6 +1,43 @@
-// window.addEventListener('DOMContentLoaded', () => {
-//     console.clear();
-// })
+// menu
+const navbarMenu = document.querySelectorAll('.navbar');
+const navbarButtons = document.querySelectorAll('.navbar-button');
+
+function toggleClass() {
+    navbarMenu.forEach((navbar) => {
+        navbar.classList.toggle('showed-hidden-navbar');
+        const isClass = navbar.classList.contains('showed-hidden-navbar');
+
+        navbar.style.display = isClass ? 'block' : 'none';
+    });
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+// change language
+const langSets = document.querySelectorAll('.lang-set');
+const langlistMenu = document.querySelectorAll('.lang-list');
+
+function toggleLang() {
+    langlistMenu.forEach((langlist) => {
+        if (window.getComputedStyle(langlist).display === 'none') {
+            langlist.style.display = 'block';
+        } else {
+            langlist.style.display = 'none';
+        }
+    })
+}
+
+
+// change language switch
+langSets.forEach(langSet => {
+    langSet.onclick = toggleLang;
+});
+
+navbarButtons.forEach((navbarButton) => {
+    navbarButton.onclick = toggleClass;
+});
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 const forms = document.querySelectorAll('form');
 forms.forEach((form) => {

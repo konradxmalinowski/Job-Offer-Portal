@@ -1,32 +1,45 @@
-// menu
-const navbar = document.querySelector('.navbar');
-const navbarButton = document.querySelector('.navbar-button');
+// daily offers
+const dailyOffersWrapper = document.querySelector('.daily-offers-wrapper');
+dailyOffersWrapper.scrollLeft = 0;
 
-// change language
-const langSet = document.querySelector('.lang-set');
-const langlist = document.querySelector('.lang-list');
+// desktop
+dailyOffersWrapper.addEventListener('wheel', (event) => {
+    event.preventDefault();
 
+    if (event.deltaY > 0) {
+        dailyOffersWrapper.scrollLeft += 100;
+    }
+    else {
+        dailyOffersWrapper.scrollLeft -= 100;
+    }
+});
+
+
+// mobile
+let touchStartX = 0;
+let touchEndX = 0;
+
+dailyOffersWrapper.addEventListener('touchStart', (event) => touchStartX = event[0].clientX);
+dailyOffersWrapper.addEventListener('touchMove', (event) => touchEndX = event[0].clientX);
+dailyOffersWrapper.addEventListener('touchEnd', () => {
+    let distance = touchStartX - touchEndX;
+
+    if (distance > 50) {
+        dailyOffersWrapper.scrollLeft += 100;
+    }
+    else if (distance < -50) {
+        dailyOffersWrapper.scrollLeft -= 100;
+    }
+})
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 // offers
 const offersWrapper = document.querySelector('.offers-wrapper');
-const loadMoreButton = document.querySelector('.load-more-button');
+const loadMoreOffersButton = document.querySelector('.load-more-button');
 const applyButtons = document.getElementsByClassName('apply-button');
 const hideApplySectionButton = document.getElementsByClassName('exit');
-
-// searching
-const searchInputs = document.querySelectorAll('.search-inputs');
-const answers = document.querySelectorAll('.answers');
-const customLists = document.querySelectorAll('.custom-list');
-const selects = document.querySelectorAll('.select');
-const findOffersButton = document.querySelector('.search-button');
-
-// searching results
-let searchFilters = [];
-let offersData;
-
-// FIXME: create function fetchLanguages, get all HTML elements with content to translate
-// function changeLanguage() {
-//     const browserDefaultLanguage = navigator.language;
-// }
 
 function createApplySection() {
     const section = document.createElement('section');
@@ -82,25 +95,7 @@ function createApplySection() {
 
 function hideApplySection() {
     const applySection = document.querySelector('.apply-section');
-    if (applySection) {
-        applySection.remove();
-    }
-}
-
-function toggleLang() {
-    if (window.getComputedStyle(langlist).display === 'none') {
-        langlist.style.display = 'block';
-    } else {
-        langlist.style.display = 'none';
-    }
-}
-
-
-function toggleClass() {
-    navbar.classList.toggle('showed-hidden-navbar');
-    const isClass = navbar.classList.contains('showed-hidden-navbar');
-
-    navbar.style.display = isClass ? 'block' : 'none';
+    if (applySection) applySection.remove();
 }
 
 async function loadOffers(max, place = '', companyName = '', jobName = '') {
@@ -159,10 +154,6 @@ async function loadOffers(max, place = '', companyName = '', jobName = '') {
 }
 
 
-// change language switch
-langSet.onclick = toggleLang;
-navbarButton.onclick = toggleClass;
-
 // show apply section
 Array.from(applyButtons).forEach((button) => {
     button.addEventListener('click', () => {
@@ -174,34 +165,23 @@ Array.from(applyButtons).forEach((button) => {
 // hide apply section
 Array.from(hideApplySectionButton).forEach((button) => {
     button.onclick = hideApplySection;
-})
-
-// send data to search offers
-loadMoreButton.addEventListener('click', (event) => {
-    searchFilters = [
-        answers[2]?.textContent.trim() || '',
-        answers[1]?.textContent.trim() || '',
-        answers[0]?.textContent.trim() || '',
-    ];
-
-    loadOffers(100, searchFilters[0], searchFilters[1], searchFilters[2]);
-    event.target.style.display = 'none';
-});
-
-// load more offers
-findOffersButton.addEventListener('click', () => {
-    searchFilters = [
-        answers[2]?.textContent.trim() || '',
-        answers[1]?.textContent.trim() || '',
-        answers[0]?.textContent.trim() || '',
-    ];
-    loadOffers(12, searchFilters[0], searchFilters[1], searchFilters[2])
 });
 
 // load offers when HTML is already loaded
 window.addEventListener('DOMContentLoaded', () => {
     loadOffers(12);
 });
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+// searching
+const searchInputs = document.querySelectorAll('.search-inputs');
+const answers = document.querySelectorAll('.answers');
+const customLists = document.querySelectorAll('.custom-list');
+const selects = document.querySelectorAll('.select');
+const findOffersButton = document.querySelector('.search-button');
+let searchFilters = [];
+let offersData;
 
 // show input options for searching
 searchInputs.forEach((searchInput, idx) => {
@@ -221,3 +201,33 @@ selects.forEach(select => {
         }
     });
 });
+
+// send data to search offers
+loadMoreOffersButton.addEventListener('click', (event) => {
+    searchFilters = [
+        answers[2]?.textContent.trim() || '',
+        answers[1]?.textContent.trim() || '',
+        answers[0]?.textContent.trim() || '',
+    ];
+
+    loadOffers(100, searchFilters[0], searchFilters[1], searchFilters[2]);
+    event.target.style.display = 'none';
+    window.scrollTo({ top: 500 });
+});
+
+// load more offers
+findOffersButton.addEventListener('click', () => {
+    searchFilters = [
+        answers[2]?.textContent.trim() || '',
+        answers[1]?.textContent.trim() || '',
+        answers[0]?.textContent.trim() || '',
+    ];
+    loadOffers(12, searchFilters[0], searchFilters[1], searchFilters[2])
+});
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+// FIXME: create function fetchLanguages, get all HTML elements with content to translate
+// function changeLanguage() {
+//     const browserDefaultLanguage = navigator.language;
+// }

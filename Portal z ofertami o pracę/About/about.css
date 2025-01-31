@@ -46,8 +46,6 @@ main {
     box-shadow: 1px 1px 5px var(--clr-font);
 }
 
-
-
 .profile-picture {
     width: 150px;
     border-radius: 50%;
