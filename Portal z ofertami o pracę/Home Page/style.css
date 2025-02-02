@@ -502,9 +502,8 @@ button {
     top: 10px;
     left: 10px;
     width: 30px;
-
     &:active {
-        filter: drop-shadow(0 0 3px red);
+        filter: drop-shadow(0 0 3px rgb(199, 10, 10));
     }
 }
 
@@ -515,6 +514,25 @@ button {
     color: var(--clr-primary-font);
     margin-bottom: 20px;
 }
+
+input[type='file']{
+    opacity: 80%;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: var(--clr-primary-200);
+    color: var(--clr-font-3);
+    border: none;
+    cursor: grab;
+    border-radius: 4px;
+    opacity: 90%;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: var(--clr-primary-400);
+    opacity: 70%;
+}
+
 
 .basic-info {
     display: flex;
