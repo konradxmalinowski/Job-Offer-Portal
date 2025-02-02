@@ -261,7 +261,7 @@ button {
     width: 100%;
     display: flex;
     justify-content: center;
-    column-gap: 40px;
+    column-gap: max(5vh, 40px);
     overflow-x: hidden;
     transition: all ease-in-out .5s 0s;
 }
@@ -337,6 +337,12 @@ button {
         opacity: 80%;
     }
 }
+
+/* @media (width <=700px) {
+    .daily-offers-wrapper {
+        width: 700px;
+    }
+} */
 
 /* medians of earnings */
 
@@ -502,6 +508,7 @@ button {
     top: 10px;
     left: 10px;
     width: 30px;
+
     &:active {
         filter: drop-shadow(0 0 3px rgb(199, 10, 10));
     }
@@ -515,7 +522,7 @@ button {
     margin-bottom: 20px;
 }
 
-input[type='file']{
+input[type='file'] {
     opacity: 80%;
 }
 
