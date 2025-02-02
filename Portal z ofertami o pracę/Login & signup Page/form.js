@@ -1,28 +1,36 @@
-const registerWrapper1 = document.querySelector('.create-account1');
-const registerWrapper2 = document.querySelector('.create-account2');
-const continueButton = document.getElementById('continue-button');
-const emailInput = document.querySelector('#email');
-const passwordInput = document.querySelector('.password');
-const createAccountButton = document.querySelector('#create-account-button');
+let registers = {
+    registerWrapper1: document.querySelector('.create-account1'),
+    registerWrapper2: document.querySelector('.create-account2')
+}
 
-continueButton.onclick = function () {
-    if (emailInput.value != '') {
+let inputs = {
+    emailInput: document.querySelector('#email'),
+    passwordInput: document.querySelector('.password')
+}
+
+let buttons = {
+    continueButton: document.getElementById('continue-button'),
+    createAccountButton: document.querySelector('#create-account-button')
+}
+
+buttons.continueButton.onclick = function () {
+    if (inputs.emailInput.value != '') {
         setTimeout(() => {
-            registerWrapper1.style.opacity = '0';
-            registerWrapper1.style.transition = '0.7s ease-in-out 0s';
+            registers.registerWrapper1.style.opacity = '0';
+            registers.registerWrapper1.style.transition = '0.7s ease-in-out 0s';
         }, 0);
 
         setTimeout(() => {
-            registerWrapper1.style.display = 'none';
+            registers.registerWrapper1.style.display = 'none';
         }, 710);
 
         setTimeout(() => {
-            registerWrapper2.style.display = 'block';
+            registers.registerWrapper2.style.display = 'block';
         }, 720);
 
         setTimeout(() => {
-            registerWrapper2.style.opacity = '1';
-            registerWrapper2.style.transition = '0.7s ease-in-out 0s';
+            registers.registerWrapper2.style.opacity = '1';
+            registers.registerWrapper2.style.transition = '0.7s ease-in-out 0s';
         }, 730);
     }
     else {
@@ -31,8 +39,8 @@ continueButton.onclick = function () {
 }
 
 
-createAccountButton.addEventListener('click', () => {
-    if (passwordInput.value != '') {
+buttons.createAccountButton.addEventListener('click', () => {
+    if (inputs.passwordInput.value != '') {
         showMessage("Password generated");
     }
-})
+});
