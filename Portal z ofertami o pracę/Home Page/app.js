@@ -38,8 +38,8 @@ dailyOffersWrapper.addEventListener('touchEnd', () => {
 // offers
 const offersWrapper = document.querySelector('.offers-wrapper');
 const loadMoreOffersButton = document.querySelector('.load-more-button');
-const applyButtons = document.getElementsByClassName('apply-button');
-const hideApplySectionButton = document.getElementsByClassName('exit');
+const applyButtons = document.getElementsByClassName('apply-button-created');
+const hideApplySectionButtons = document.getElementsByClassName('exit');
 
 function createApplySection() {
     const section = document.createElement('section');
@@ -60,7 +60,6 @@ function createApplySection() {
         </div>
     
         <div class="fill-data-section">
-            <span class="grey">My information</span>
             <span>Fill out the information below</span>
     
             <form action="" method="post" class="apply-form">
@@ -91,11 +90,18 @@ function createApplySection() {
     `;
 
     document.body.appendChild(section);
+    document.querySelectorAll('body > *:not(.apply-section').forEach(el => {
+        el.style.filter = 'blur(7px)';
+    });
+
 }
 
-function hideApplySection() {
-    const applySection = document.querySelector('.apply-section');
-    if (applySection) applySection.remove();
+function hideApplySection(idx) {
+    const applySections = document.getElementsByClassName('apply-section');
+    if (applySections[idx]) applySections[idx].style.display = 'none';
+    document.querySelectorAll('body > *:not(.apply-section').forEach(el => {
+        el.style.filter = 'none';
+    });
 }
 
 async function loadOffers(max, place = '', companyName = '', jobName = '') {
@@ -110,7 +116,7 @@ async function loadOffers(max, place = '', companyName = '', jobName = '') {
 
         data
             .filter((offer, idx) =>
-                idx < max &&
+                idx <= max &&
                 (place === '' || offer.place.toLowerCase().includes(place.toLowerCase())) &&
                 (companyName === '' || offer.companyName.toLowerCase().includes(companyName.toLowerCase())) &&
                 (jobName === '' || offer.name.toLowerCase().includes(jobName.toLowerCase()))
@@ -143,6 +149,7 @@ async function loadOffers(max, place = '', companyName = '', jobName = '') {
                 placeElem.textContent = offer.place;
 
                 const button = document.createElement('button');
+                button.classList.add('apply-button-created');
                 button.textContent = 'Apply';
 
                 offerDiv.append(name, employmentType, companyNameElem, placeElem, button);
@@ -153,27 +160,28 @@ async function loadOffers(max, place = '', companyName = '', jobName = '') {
     }
 }
 
-
-// show apply section
-Array.from(applyButtons).forEach((button) => {
-    button.addEventListener('click', () => {
-        createApplySection();
-    });
-});
-
-
-// hide apply section
-Array.from(hideApplySectionButton).forEach((button) => {
-    button.onclick = hideApplySection;
-});
-
 // load offers when HTML is already loaded
 window.addEventListener('DOMContentLoaded', () => {
-    loadOffers(12);
+    loadOffers(12)
+        .then(() => {
+            // show apply section
+            Array.from(applyButtons).forEach((button) => {
+                button.addEventListener('click', () => {
+                    createApplySection();
+
+                    // hide apply section
+                    Array.from(hideApplySectionButtons).forEach((button, idx) => {
+                        button.addEventListener('click', () => {
+                            hideApplySection(idx);
+                        })
+                    });
+                });
+            });
+        })
 });
 
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    - - - - - - - - - */
 // searching
 const searchInputs = document.querySelectorAll('.search-inputs');
 const answers = document.querySelectorAll('.answers');
@@ -204,6 +212,7 @@ selects.forEach(select => {
 
 // send data to search offers
 loadMoreOffersButton.addEventListener('click', (event) => {
+    event.target.style.display = 'none';
     searchFilters = [
         answers[2]?.textContent.trim() || '',
         answers[1]?.textContent.trim() || '',
@@ -211,7 +220,6 @@ loadMoreOffersButton.addEventListener('click', (event) => {
     ];
 
     loadOffers(100, searchFilters[0], searchFilters[1], searchFilters[2]);
-    event.target.style.display = 'none';
     window.scrollTo({ top: 500 });
 });
 
@@ -222,7 +230,7 @@ findOffersButton.addEventListener('click', () => {
         answers[1]?.textContent.trim() || '',
         answers[0]?.textContent.trim() || '',
     ];
-    loadOffers(12, searchFilters[0], searchFilters[1], searchFilters[2])
+    loadOffers(12, searchFilters[0], searchFilters[1], searchFilters[2]);
 });
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

@@ -189,6 +189,7 @@ form {
     gap: 20px;
     position: relative;
     border-radius: 10px;
+    font-size: 18px;
 
     &::before {
         content: 'Super offer';
@@ -468,9 +469,9 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--clr-primary-300);
+    background-color: var(--clr-primary-200);
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(var(--clr-font) 0.1);
+    box-shadow: 0 4px 30px rgba(var(--clr-font) 0.1);
     padding: 40px;
     z-index: 2;
     overflow-y: auto;
@@ -546,6 +547,11 @@ button {
     font-weight: bold;
 }
 
+
+.fill-data-section span:nth-child(1) {
+    text-align: center;
+}
+
 .apply-form {
     display: flex;
     flex-direction: column;
@@ -561,8 +567,9 @@ button {
 .apply-form textarea {
     width: 400px;
     padding: 10px;
-    border: 1px solid var(--clr-primary-200);
-    background-color: transparent;
+    border: 1px solid var(--clr-primary-300);
+    background-color: var(--clr-primary-300);
+    color: var(--clr-primary-font);
     border-radius: 4px;
     font-size: 14px;
     outline: none;
