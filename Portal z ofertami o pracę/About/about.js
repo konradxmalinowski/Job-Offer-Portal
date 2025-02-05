@@ -41,3 +41,10 @@ buttons.forEach((button, idx) => {
         else if (idx === 5) descriptionsHTML[1].textContent = Szymon.aboutSkills;
     });
 });
+
+
+// services
+// const service = document.querySelectorAll('service');
+// service.forEach(service => {
+//     service.addEventListener('mouseount')
+// })
