@@ -152,3 +152,6 @@ Moja lista to: [
     "otherInformation": "Możliwość awansu w ramach struktury firmy"
   }
 ]
+
+// **4**
+Wygeneruj logo dla firmy z ogłoszeniami pracy z dodatkami butelkowej zieleni
