@@ -180,7 +180,7 @@ form {
 
 .offer {
     height: 300px;
-    min-width: 300px;
+    min-width: 280px;
     background-color: var(--clr-primary-200);
     padding: 20px;
     display: flex;

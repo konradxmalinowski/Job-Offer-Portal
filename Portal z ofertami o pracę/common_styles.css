@@ -244,6 +244,7 @@ header {
     background-color: transparent;
     border: none;
     position: fixed;
+    top: 20px;
     right: 20px;
     z-index: 3;
     display: none;
