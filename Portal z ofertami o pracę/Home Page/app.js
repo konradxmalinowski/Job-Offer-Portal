@@ -1,43 +1,19 @@
-// daily offers
+import createStructureOfApplyDialog from "./apply_structure.js";
+
+
 const dailyOffersWrapper = document.querySelector('.daily-offers-wrapper');
-dailyOffersWrapper.scrollLeft = 2000;
 
 // desktop
 dailyOffersWrapper.addEventListener('wheel', (event) => {
     event.preventDefault();
 
     if (event.deltaY > 0) {
-        dailyOffersWrapper.scrollLeft += 125;
-    }
-    else {
-        dailyOffersWrapper.scrollLeft -= 125;
-    }
-});
-
-
-// mobile
-let touchStartX = 0;
-let touchEndX = 0;
-
-dailyOffersWrapper.addEventListener('touchStart', (event) => {
-    touchStartX = event[0].clientX;
-});
-
-dailyOffersWrapper.addEventListener('touchMove', (event) => {
-    touchEndX = event[0].clientX;
-});
-
-dailyOffersWrapper.addEventListener('touchEnd', () => {
-    let distance = touchStartX - touchEndX;
-
-    if (distance > 50) {
         dailyOffersWrapper.scrollLeft += 100;
     }
-    else if (distance < -50) {
+    else {
         dailyOffersWrapper.scrollLeft -= 100;
     }
-})
-
+});
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -48,57 +24,11 @@ const applyButtons = document.getElementsByClassName('apply-button-created');
 let offersData = [];
 let createdApplySections = [];
 
-function structureOfApplySection(offersData, idx) {
-    return `
-       <div class="exit"><img src="images/exit.png" alt="exit icon" id="exit"></div>
-        <h1 class="job-title">${offersData[idx].name}</h1>
-        <div class="basic-info">
-            <span class="days">
-                <img src="images/calendar-icon.png" alt="calendar icon"> ${offersData[idx]?.daysOfWork}
-            </span>
-            <span class="location">
-                <img src="images/location-icon.png" alt="location icon"> ${offersData[idx]?.place}
-            </span>
-            <span class="people">
-                <img src="images/people-icon.png" alt="people icon"> ${offersData[idx]?.salary}
-            </span>
-        </div>  
-    
-        <div class="fill-data-section">
-            <span>Fill out the information below</span>
-    
-            <form action="" method="post" class="apply-form">
-                <label for="full-name-input" class="grey bold">Full name <span class="star">*</span></label>
-                <input type="text" name="full-name-input" id="full-name-input" placeholder="Enter full name">
-    
-                <label for="email-input" class="grey bold">Email address <span class="star">*</span></label>
-                <input type="email" name="email-input" id="email-input" placeholder="Enter email address">
-    
-                <label for="phone-number-input" class="grey bold">Phone number <span class="star">*</span></label>
-                <input type="tel" name="phone-number-input" id="phone-number-input" placeholder="Enter phone number">
-    
-                <label for="cv-upload" class="grey bold">Upload CV <span class="star">*</span></label>
-                <input type="file" name="cv-upload" id="cv-upload">
-    
-                <label for="linkedin" class="grey bold">LinkedIn profile</label>
-                <input type="url" name="linkedin" id="linkedin" placeholder="Enter LinkedIn profile link">
-    
-                <label for="portfolio" class="grey bold">Portfolio link</label>
-                <input type="url" name="portfolio" id="portfolio" placeholder="Enter portfolio link">
-    
-                <label for="cover-letter" class="grey bold">Cover letter</label>
-                <textarea name="cover-letter" id="cover-letter" placeholder="Write a short cover letter"></textarea>
-    
-                <button type="submit" class="apply-submit">Apply now</button>
-            </form>
-        </div>
-    `;
-}
 
 function createApplySection(idx) {
     const section = document.createElement('section');
     section.className = 'apply-section';
-    section.innerHTML = structureOfApplySection(offersData, idx)
+    section.innerHTML = createStructureOfApplyDialog(offersData, idx);
 
     document.body.appendChild(section);
     createdApplySections[idx] = section;
@@ -117,7 +47,7 @@ function hideApplySection(idx) {
     });
 }
 
-function structureOfOffer(offer, idx) {
+function createStructureOfOffers(offer, idx) {
     const offerDiv = document.createElement('div');
     offerDiv.classList.add('offer', `offer${idx + 1}`);
     offerDiv.addEventListener("mouseover", () => {
@@ -130,16 +60,18 @@ function structureOfOffer(offer, idx) {
 
     const name = document.createElement('h2');
     name.textContent = offer.name;
-    name.style.fontWeight = '700';
+    name.style.fontWeight = '800';
+    name.style.fontSize = '30px';
+    name.style.textAlign = 'center';
 
     const companyNameElem = document.createElement('p');
     companyNameElem.textContent = offer.companyName;
     companyNameElem.style.fontWeight = '600';
-    companyNameElem.style.fontSize = '17px';
+    companyNameElem.style.fontSize = '25px';
 
     const employmentType = document.createElement('p');
     employmentType.textContent = offer.employmentType;
-    employmentType.style.color = 'var(--clr-grey)';
+    employmentType.style.color = 'var(--clr-grey2)';
 
     const placeElem = document.createElement('p');
     placeElem.textContent = offer.place;
@@ -148,14 +80,41 @@ function structureOfOffer(offer, idx) {
     button.classList.add('apply-button-created');
     button.textContent = 'Apply';
 
-    offerDiv.append(name, employmentType, companyNameElem, placeElem, button);
+    offerDiv.append(name, companyNameElem, employmentType, placeElem, button);
     offersWrapper.appendChild(offerDiv);
+}
+
+function handleClickApplyButon() {
+    Array.from(applyButtons).forEach((button, idx) => {
+        button.addEventListener('click', () => {
+            if (createdApplySections[idx])
+                createdApplySections[idx].style.display = 'flex';
+            else
+                createApplySection(idx);
+
+            let hideApplySectionButtons = document.getElementsByClassName('exit');
+            hideApplySectionButtons[0].addEventListener('click', () => {
+                hideApplySection(idx);
+            });
+
+            window.document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') {
+                    hideApplySection(idx);
+                    button.blur();
+                }
+            });
+        });
+    });
 }
 
 async function loadOffers(max, place = '', companyName = '', jobName = '') {
     offersWrapper.innerHTML = '';
     offersData = [];
     createdApplySections = [];
+
+    if (jobName === 'Stanowisko...') jobName = '';
+    if (companyName === 'Firma...') companyName = '';
+    if (place === 'Lokalizacja...') place = '';
 
     try {
         const response = await fetch('./list_of_offers-en.json');
@@ -171,46 +130,42 @@ async function loadOffers(max, place = '', companyName = '', jobName = '') {
                 (companyName === '' || offer.companyName.toLowerCase().includes(companyName.toLowerCase())) &&
                 (jobName === '' || offer.name.toLowerCase().includes(jobName.toLowerCase()))
             )
-            .forEach((offer, idx) => { structureOfOffer(offer, idx) });
+            .forEach((offer, idx) => { createStructureOfOffers(offer, idx) });
     } catch (error) {
         console.error('Error loading offers:', error);
     }
 }
 
-// load offers when HTML is already loaded
+
 window.addEventListener('DOMContentLoaded', () => {
-    loadOffers(12)
-        .then(() => {
-            // show apply section
-            Array.from(applyButtons).forEach((button, idx) => {
-                button.addEventListener('click', () => {
-                    createdApplySections[idx] ? createdApplySections[idx].style.display = 'flex' : createApplySection(idx);
-
-                    let hideApplySectionButtons = document.getElementsByClassName('exit');
-                    hideApplySectionButtons[0].addEventListener('click', () => {
-                        hideApplySection(idx);
-                    });
-
-                    window.document.addEventListener('keydown', (event) => {
-                        if (event.key === 'Escape') {
-                            hideApplySection(idx);
-                            button.blur();
-                        }
-                    });
-                });
-            });
-        })
+    loadOffers(11)
+        .then(handleClickApplyButon);
 });
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - */
 // searching
 const searchInputs = document.querySelectorAll('.search-inputs');
-const answers = document.querySelectorAll('.answers');
+const options = document.querySelectorAll('.options');
 const customLists = document.querySelectorAll('.custom-list');
 const selects = document.querySelectorAll('.select');
 const findOffersButton = document.querySelector('.search-button');
+const clearInputsButton = document.querySelector('.clear-button');
 let searchFilters = [];
+
+function IsChosen(idx, select) {
+    let values = ['custom-list1-select', 'custom-list2-select', 'custom-list3-select'];
+    return select.classList.contains(values[idx]);
+}
+
+
+function clearInputs() {
+    options.forEach((option, idx) => {
+        if (idx === 0) option.textContent = 'Stanowisko...';
+        else if (idx === 1) option.textContent = 'Firma...';
+        else if (idx === 2) option.textContent = 'Lokalizacja...';
+    });
+}
 
 // show input options for searching
 searchInputs.forEach((searchInput, idx) => {
@@ -219,25 +174,39 @@ searchInputs.forEach((searchInput, idx) => {
     });
 });
 
+options.forEach((option, idx) => {
+    if (option.textContent != '') {
+        return;
+    }
+
+    if (idx === 0) option.textContent = 'Stanowisko...';
+    else if (idx === 1) option.textContent = 'Firma...';
+    else if (idx === 2) option.textContent = 'Lokalizacja...';
+});
+
 selects.forEach(select => {
     select.addEventListener('click', () => {
-        if (select.classList.contains('custom-list1-select')) {
-            answers[0].textContent = select.textContent.trim();
-        } else if (select.classList.contains('custom-list2-select')) {
-            answers[1].textContent = select.textContent.trim();
-        } else if (select.classList.contains('custom-list3-select')) {
-            answers[2].textContent = select.textContent.trim();
+        if (IsChosen(0, select)) {
+            options[0].textContent = select.textContent.trim();
+        }
+        if (IsChosen(1, select)) {
+            options[1].textContent = select.textContent.trim();
+        }
+        if (IsChosen(2, select)) {
+            options[2].textContent = select.textContent.trim();
         }
     });
 });
+
+clearInputsButton.onclick = clearInputs;
 
 // send data to search offers
 loadMoreOffersButton.addEventListener('click', (event) => {
     event.target.style.display = 'none';
     searchFilters = [
-        answers[2]?.textContent.trim() || '',
-        answers[1]?.textContent.trim() || '',
-        answers[0]?.textContent.trim() || '',
+        options[2]?.textContent.trim() || '',
+        options[1]?.textContent.trim() || '',
+        options[0]?.textContent.trim() || '',
     ];
 
     loadOffers(100, searchFilters[0], searchFilters[1], searchFilters[2]);
@@ -247,9 +216,9 @@ loadMoreOffersButton.addEventListener('click', (event) => {
 // load more offers
 findOffersButton.addEventListener('click', () => {
     searchFilters = [
-        answers[2]?.textContent.trim() || '',
-        answers[1]?.textContent.trim() || '',
-        answers[0]?.textContent.trim() || '',
+        options[2]?.textContent.trim() || '',
+        options[1]?.textContent.trim() || '',
+        options[0]?.textContent.trim() || '',
     ];
     loadOffers(12, searchFilters[0], searchFilters[1], searchFilters[2]);
 });

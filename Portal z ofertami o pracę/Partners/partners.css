@@ -4,10 +4,12 @@
     --clr-primary-300: #343842;
     --clr-primary-200: #272a2e;
     --clr-grey: #4c585b;
+    --clr-grey2: rgb(167, 167, 167);
     --clr-font: black;
     --clr-font-2: whitesmoke;
     --clr-primary-font: #fff;
 }
+
 
 main {
     margin: 40px 0;
@@ -63,7 +65,7 @@ main {
 }
 
 
-.partners-img{
+.partners-img {
     width: 150px;
     margin: 5px;
     filter: drop-shadow(2px 2px 2px var(--clr-font));
@@ -78,7 +80,8 @@ main {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
     }
-    .partners-cards{
+
+    .partners-cards {
         width: 90%;
     }
 }

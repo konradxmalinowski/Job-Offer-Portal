@@ -2,12 +2,34 @@
 const navbarMenu = document.querySelectorAll('.navbar');
 const navbarButtons = document.querySelectorAll('.navbar-button');
 
+navbarMenu.forEach((navbar) => {
+    navbar.classList.add('hidden-navbar');
+});
+
 function toggleClass() {
     navbarMenu.forEach((navbar) => {
-        navbar.classList.toggle('showed-hidden-navbar');
-        const isClass = navbar.classList.contains('showed-hidden-navbar');
+        let isClass = navbar.classList.contains('showed-navbar');
 
-        navbar.style.display = isClass ? 'block' : 'none';
+        if (isClass) {
+            setTimeout(() => {
+                navbar.classList.add('hidden-navbar');
+                navbar.classList.remove('showed-navbar');
+            }, 0);
+
+            setTimeout(() => {
+                navbar.style.display = 'none';
+            }, 750)
+        }
+        else {
+            setTimeout(() => {
+                navbar.classList.add('showed-navbar');
+                navbar.classList.remove('hidden-navbar');
+            }, 0);
+
+            setTimeout(() => {
+                navbar.style.display = 'block';
+            }, 750);
+        }
     });
 }
 
@@ -23,7 +45,9 @@ function toggleLang() {
         } else {
             langlist.style.display = 'none';
         }
-    })
+    });
+
+
 }
 
 
@@ -35,6 +59,7 @@ langSets.forEach(langSet => {
 navbarButtons.forEach((navbarButton) => {
     navbarButton.onclick = toggleClass;
 });
+
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
