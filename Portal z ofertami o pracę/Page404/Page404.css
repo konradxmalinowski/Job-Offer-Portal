@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100svh;
     position: relative;
 }
 
@@ -29,8 +29,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
-
+    height: 100svh;
 }
 
 .oops-text {
@@ -39,7 +38,7 @@ body {
     letter-spacing: 6px;
     text-align: center;
     z-index: 2;
-    color: (--clr-primary);
+    color: var(--clr-primary);
 }
 
 .not-found-text:nth-child(2) {
@@ -71,6 +70,7 @@ body {
     border: none;
     z-index: 3;
     opacity: 80%;
+
     &:hover {
         width: 210px;
         transition: width 0.2s ease-in-out;
@@ -134,7 +134,15 @@ body {
 }
 
 @keyframes twinkling {
-    0% { opacity: 0.5; }
-    50% { opacity: 1; }
-    100% { opacity: 0.5; }
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
 }
