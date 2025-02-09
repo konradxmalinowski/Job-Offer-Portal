@@ -36,6 +36,7 @@ function toggleClass() {
 // change language
 const langSets = document.querySelectorAll('.lang-set');
 const langlistMenu = document.querySelectorAll('.lang-list');
+const arrowDown = document.querySelector('img[alt="arrow-down"]');
 
 function toggleLang() {
   langlistMenu.forEach((langlist) => {
@@ -45,6 +46,13 @@ function toggleLang() {
       langlist.style.display = 'none';
     }
   });
+
+  if (window.getComputedStyle(arrowDown).rotate === '0deg') {
+    arrowDown.style.animation = 'rotate1 .5s ease-in-out 0s normal forwards';
+  }
+  if (window.getComputedStyle(arrowDown).rotate === '180deg') {
+    arrowDown.style.animation = 'rotate2 .5s ease-in-out 0s normal forwards';
+  }
 }
 
 // change language switch

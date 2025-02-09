@@ -44,14 +44,6 @@ html {
   color: rgb(201, 0, 0);
 }
 
-.underlined {
-  text-decoration: underline 1px solid var(--clr-primary-font);
-
-  &:hover {
-    text-decoration-color: var(--clr-primary-100);
-  }
-}
-
 .message {
   width: 140px;
   min-height: 80px;
@@ -149,7 +141,7 @@ header {
   position: relative;
   top: 20px;
   left: 8px;
-  transition: 0.1s ease-in-out;
+  rotate: 0deg;
 }
 
 .lang-list {
@@ -165,14 +157,6 @@ header {
   display: none;
   transition: 0.1s ease-in-out;
   color: var(--clr-font-2);
-}
-
-.lang-set:focus img:nth-child(2) {
-  transform: rotate(180deg);
-}
-
-.lang-set:active .lang-list {
-  display: block;
 }
 
 .lang-list img {
@@ -424,5 +408,23 @@ footer {
 
   to {
     opacity: 0;
+  }
+}
+
+@keyframes rotate1 {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 180deg;
+  }
+}
+
+@keyframes rotate2 {
+  from {
+    rotate: 180deg;
+  }
+  to {
+    rotate: 0deg;
   }
 }

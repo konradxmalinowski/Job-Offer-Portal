@@ -3,6 +3,16 @@ const nameInput = document.querySelector('#name');
 const surnameInput = document.querySelector('#surname');
 const birthInput = document.querySelector('#birth-date');
 const telInput = document.querySelector('#telephone');
+const skillsInput = document.querySelector("#skills");
+
+// choose color
+const colorItems = document.querySelectorAll(".color");
+const images = document.querySelectorAll(".image");
+images[0].style.display = 'block';
+let checked = new Array(5).fill(false);
+
+// messages content
+const namesOfIndexEN = ['name', 'surname', 'skills', 'birth date', 'email', 'phone number'];
 
 const emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 const dateRegEx = /^\d{4}-\d{2}-\d{2}$/;
@@ -36,35 +46,20 @@ function validateData() {
 
 crateButton.onclick = validateData;
 
-
-
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-
-
-
-// form inputs
-const skillsInput = document.querySelector("#skills");
-
-// choose color
-const colorItems = document.querySelectorAll(".color");
-const images = document.querySelectorAll(".image");
-images[0].style.display = 'block';
-let checked = new Array(5).fill(false);
-
-// messages content
-const namesOfIndexEN = ['name', 'surname', 'skills', 'birth date', 'email', 'phone number'];
-
-
-colorItems.forEach((color, idx) => {
-    color.addEventListener("click", () => {
-        images.forEach((image) => (image.style.display = "none"));
-        images[idx].style.display = "block";
-        checked.fill(false, 0);
-        checked[idx] = true;
+function handleColorClick() {
+    colorItems.forEach((color, idx) => {
+        color.addEventListener("click", () => {
+            images.forEach((image) => (image.style.display = "none"));
+            images[idx].style.display = "block";
+            checked.fill(false, 0);
+            checked[idx] = true;
+        });
     });
-});
+}
 
-crateButton.addEventListener("click", () => {
+handleColorClick();
+
+function createCV() {
     let userData = [];
     let invalidData = [];
 
@@ -79,4 +74,14 @@ crateButton.addEventListener("click", () => {
         });
         showMessage(`Enter data in field:`, `${[...invalidData].join(', ')}`);
     }
-}); 
+}
+
+crateButton.onclick = createCV;
+
+function checkPhoneCorrectness() {
+    telInput.addEventListener("keydown", () => {
+        telInput.value = telInput.value.replace(/[^\d-+()]/, '');
+    });
+}
+
+checkPhoneCorrectness();
