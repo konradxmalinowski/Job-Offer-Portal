@@ -1,5 +1,5 @@
 function createStructureOfApplyDialog(offersData, idx) {
-    return `
+  return `
        <div class="exit"><img src="images/exit.png" alt="exit icon" id="exit"></div>
         <h1 class="job-title">${offersData[idx].name}</h1>
         <div class="basic-info">
@@ -44,6 +44,5 @@ function createStructureOfApplyDialog(offersData, idx) {
         </div>
     `;
 }
-
 
 export default createStructureOfApplyDialog;
