@@ -169,6 +169,8 @@ function clearInputs() {
     else if (idx === 1) option.textContent = 'Firma...';
     else if (idx === 2) option.textContent = 'Lokalizacja...';
   });
+
+  loadOffers(11);
 }
 
 // show input options for searching
