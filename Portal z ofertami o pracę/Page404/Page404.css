@@ -1,148 +1,144 @@
 :root {
-    --clr-primary: #003d2b;
-    --clr-primary-400: #222529;
-    --clr-primary-300: #343842;
-    --clr-primary-200: #272a2e;
-    --clr-grey: #4c585b;
-    --clr-alt-primary: #046346;
-    --clr-grey2: rgb(167, 167, 167);
-    --clr-font: black;
-    --clr-font-2: whitesmoke;
-    --clr-primary-font: #fff;
+  --clr-primary: #003d2b;
+  --clr-primary-400: #222529;
+  --clr-primary-300: #343842;
+  --clr-primary-200: #272a2e;
+  --clr-grey: #4c585b;
+  --clr-alt-primary: #046346;
+  --clr-grey2: rgb(167, 167, 167);
+  --clr-font: black;
+  --clr-font-2: whitesmoke;
+  --clr-primary-font: #fff;
 }
 
 body {
-    background-color: black;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100svh;
-    position: relative;
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+  position: relative;
 }
 
-
-
 .page-not-found-section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100svh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100svh;
 }
 
 .oops-text {
-    font-size: clamp(6rem, 13vw, 18rem);
-    font-weight: 900;
-    letter-spacing: 6px;
-    text-align: center;
-    z-index: 2;
-    color: var(--clr-primary);
+  font-size: clamp(6rem, 13vw, 18rem);
+  font-weight: 900;
+  letter-spacing: 6px;
+  text-align: center;
+  z-index: 2;
+  color: var(--clr-primary);
 }
 
 .not-found-text:nth-child(2) {
-    margin: 35px 0 5px 0;
-    font-size: 20px;
-    text-align: center;
-    opacity: 80%;
+  margin: 35px 0 5px 0;
+  font-size: 20px;
+  text-align: center;
+  opacity: 80%;
 }
 
 .not-found-text:nth-child(3) {
-    margin: 15px 0 25px 0;
-    font-size: 17px;
-    text-align: center;
-    opacity: 75%;
+  margin: 15px 0 25px 0;
+  font-size: 17px;
+  text-align: center;
+  opacity: 75%;
 }
-
 
 .back-to-homepage-link {
-    background-color: var(--clr-primary);
-    height: 35px;
-    width: 180px;
-    padding: 23px;
-    border-radius: 30px;
-    color: var(--clr-font-2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    border: none;
-    z-index: 3;
-    opacity: 80%;
+  background-color: var(--clr-primary);
+  height: 35px;
+  width: 180px;
+  padding: 23px;
+  border-radius: 30px;
+  color: var(--clr-font-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: none;
+  z-index: 3;
+  opacity: 80%;
 
-    &:hover {
-        width: 210px;
-        transition: width 0.2s ease-in-out;
-        opacity: 90%;
-    }
+  &:hover {
+    width: 210px;
+    transition: width 0.2s ease-in-out;
+    opacity: 90%;
+  }
 }
 
-
 .oops-text span {
-    color: var(--clr-primary);
-    display: inline-block;
-    animation: changeLetter 3.5s infinite alternate;
+  color: var(--clr-primary);
+  display: inline-block;
+  animation: changeLetter 3.5s infinite alternate;
 }
 
 .oops-text span:nth-child(1) {
-    animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .oops-text span:nth-child(2) {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .oops-text span:nth-child(3) {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 .oops-text span:nth-child(4) {
-    animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 
 .oops-text span:nth-child(5) {
-    animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 
 .stars {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url('https://www.transparenttextures.com/patterns/stardust.png');
-    opacity: 0.6;
-    animation: twinkling 3.5s infinite alternate;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.6;
+  animation: twinkling 3.5s infinite alternate;
 }
 
 @keyframes changeLetter {
-    0% {
-        transform: scale(1);
-        color: var(--clr-primary);
-    }
+  0% {
+    transform: scale(1);
+    color: var(--clr-primary);
+  }
 
-    50% {
-        transform: scale(1.1);
-        color: var(--clr-alt-primary);
-    }
+  50% {
+    transform: scale(1.1);
+    color: var(--clr-alt-primary);
+  }
 
-    100% {
-        transform: scale(1);
-        color: var(--clr-primary);
-    }
+  100% {
+    transform: scale(1);
+    color: var(--clr-primary);
+  }
 }
 
 @keyframes twinkling {
-    0% {
-        opacity: 0.5;
-    }
+  0% {
+    opacity: 0.5;
+  }
 
-    50% {
-        opacity: 1;
-    }
+  50% {
+    opacity: 1;
+  }
 
-    100% {
-        opacity: 0.5;
-    }
+  100% {
+    opacity: 0.5;
+  }
 }
