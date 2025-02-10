@@ -38,6 +38,16 @@ function clearOldOffers() {
     createdApplySections = [];
 }
 
+function clearInputs() {
+    options.forEach((option, idx) => {
+        if (idx === 0) option.textContent = 'Stanowisko...';
+        else if (idx === 1) option.textContent = 'Firma...';
+        else if (idx === 2) option.textContent = 'Lokalizacja...';
+    });
+
+    loadOffers(12);
+}
+
 async function loadOffers(max, place = '', companyName = '', jobName = '') {
     clearOldOffers();
     if (jobName === 'Stanowisko...') jobName = '';
@@ -55,7 +65,6 @@ async function loadOffers(max, place = '', companyName = '', jobName = '') {
         data
             .filter(
                 (offer) =>
-                    numberOfOffers <= max &&
                     (place === '' ||
                         offer.place.toLowerCase().includes(place.toLowerCase())) &&
                     (companyName === '' ||
@@ -67,6 +76,10 @@ async function loadOffers(max, place = '', companyName = '', jobName = '') {
             )
             .forEach((offer, idx) => {
                 numberOfOffers++;
+                if (numberOfOffers > max) {
+                    return;
+                }
+
                 createOfferCard(offer, idx);
             });
     } catch (error) {

@@ -54,6 +54,15 @@ main {
   font-weight: 450;
   color: var(--clr-font-2);
   line-height: 1.7;
+  text-align: justify;
+}
+
+.company-name {
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--clr-primary-font);
+  display: block;
+  text-align: center;
 }
 
 .special-text {

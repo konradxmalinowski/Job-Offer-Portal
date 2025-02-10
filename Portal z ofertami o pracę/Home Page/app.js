@@ -24,7 +24,7 @@ let offersData = [];
 let createdApplySections = [];
 
 window.addEventListener('DOMContentLoaded', () => {
-  loadOffers(11).then(handleClickApplyButton)
+  loadOffers(12).then(handleClickApplyButton)
 });
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - */
@@ -44,16 +44,6 @@ function isChosen(idx, select) {
     'custom-list3-select',
   ];
   return select.classList.contains(values[idx]);
-}
-
-function clearInputs() {
-  options.forEach((option, idx) => {
-    if (idx === 0) option.textContent = 'Stanowisko...';
-    else if (idx === 1) option.textContent = 'Firma...';
-    else if (idx === 2) option.textContent = 'Lokalizacja...';
-  });
-
-  loadOffers(11);
 }
 
 // show input options for searching
