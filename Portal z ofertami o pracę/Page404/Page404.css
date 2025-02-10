@@ -21,6 +21,7 @@ body {
   position: relative;
 }
 
+/* wrapper */
 .page-not-found-section {
   width: 100%;
   display: flex;
@@ -30,6 +31,7 @@ body {
   height: 100svh;
 }
 
+/* main text */
 .oops-text {
   font-size: clamp(6rem, 13vw, 18rem);
   font-weight: 900;
@@ -53,6 +55,7 @@ body {
   opacity: 75%;
 }
 
+/* come back button */
 .back-to-homepage-link {
   background-color: var(--clr-primary);
   height: 35px;
@@ -112,6 +115,7 @@ body {
   animation: twinkling 3.5s infinite alternate;
 }
 
+/* animations */
 @keyframes changeLetter {
   0% {
     transform: scale(1);

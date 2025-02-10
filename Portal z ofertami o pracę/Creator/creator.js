@@ -1,3 +1,4 @@
+// inputs
 const emailInput = document.querySelector('#email');
 const nameInput = document.querySelector('#name');
 const surnameInput = document.querySelector('#surname');
@@ -14,11 +15,13 @@ let checked = new Array(5).fill(false);
 // messages content
 const namesOfIndexEN = ['name', 'surname', 'skills', 'birth date', 'email', 'phone number'];
 
+// Regular expressions
 const emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 const dateRegEx = /^\d{4}-\d{2}-\d{2}$/;
 const telRegEx = /^(\+\d{1,3}\s?)?(\(?\d{1,4}\)?[\s.-]?)?[\d\s.-]{5,15}$/;
 const nameRegEx = /^[a-z0-9(\s)]{3,30}$/i;
 
+// buttons
 const crateButton = document.querySelector('#create-button');
 
 function validateInputValue(regEx, data, message) {

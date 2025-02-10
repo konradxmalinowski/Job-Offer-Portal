@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 // menu
 const navbarMenu = document.querySelectorAll('.navbar');
 const navbarButtons = document.querySelectorAll('.navbar-button');

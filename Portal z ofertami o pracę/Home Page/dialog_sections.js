@@ -1,5 +1,8 @@
-function createStructureOfApplyDialog(offersData, idx) {
-  return `
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+
+function createApplyDialog(offersData, idx) {
+    return `
        <div class="exit"><img src="images/exit.png" alt="exit icon" id="exit"></div>
         <h1 class="job-title">${offersData[idx].name}</h1>
         <div class="basic-info">
@@ -45,4 +48,47 @@ function createStructureOfApplyDialog(offersData, idx) {
     `;
 }
 
-export default createStructureOfApplyDialog;
+function createApplySection(idx) {
+    const section = document.createElement('section');
+    section.className = 'apply-section';
+    section.innerHTML = createApplyDialog(offersData, idx);
+
+    document.body.appendChild(section);
+    createdApplySections[idx] = section;
+    document
+        .querySelectorAll('body > *:not(.apply-section, script')
+        .forEach((el) => {
+            el.style.filter = 'blur(7px)';
+        });
+}
+
+function hideApplySection(idx) {
+    if (createdApplySections[idx]) {
+        createdApplySections[idx].remove();
+    }
+    document.querySelectorAll('body > *:not(.apply-section').forEach((el) => {
+        el.style.filter = 'none';
+    });
+}
+
+function handleClickApplyButton() {
+    Array.from(applyButtons).forEach((button, idx) => {
+        button.addEventListener('click', () => {
+            if (createdApplySections[idx])
+                createdApplySections[idx].style.display = 'flex';
+            else createApplySection(idx);
+
+            let hideApplySectionButtons = document.getElementsByClassName('exit');
+            hideApplySectionButtons[0].addEventListener('click', () => {
+                hideApplySection(idx);
+            });
+
+            window.document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') {
+                    hideApplySection(idx);
+                    button.blur();
+                }
+            });
+        });
+    });
+}

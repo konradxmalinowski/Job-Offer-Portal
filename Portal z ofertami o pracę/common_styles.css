@@ -31,9 +31,9 @@ html {
   color: var(--clr-primary-100);
 }
 
-.grey {
+/* .grey {
   color: var(--clr-grey2);
-}
+} */
 
 .block {
   display: block;
@@ -63,12 +63,6 @@ html {
 
 .bold {
   font-weight: 700;
-}
-
-.basic-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 body {
@@ -346,6 +340,7 @@ footer {
   }
 }
 
+/* animations */
 @keyframes zoomIn {
   from {
     opacity: 1;
