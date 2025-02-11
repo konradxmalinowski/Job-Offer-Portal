@@ -354,7 +354,7 @@ footer {
   width: 30px;
 }
 
-@media (width <=830px) {
+@media (width <=990px) {
   .navbar-button {
     display: block;
   }
