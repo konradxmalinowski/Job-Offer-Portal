@@ -31,16 +31,14 @@ const Konrad = new Developer('Konrad', ...descriptions['Konrad']);
 
 buttons.forEach((button, idx) => {
     button.addEventListener('click', () => {
+        // Konrad
         if (idx === 0) descriptionsHTML[0].textContent = Konrad.aboutWork;
         else if (idx === 1) descriptionsHTML[0].textContent = Konrad.aboutLife;
         else if (idx === 2) descriptionsHTML[0].textContent = Konrad.aboutSkills;
         else if (idx === 3) descriptionsHTML[0].innerHTML = Konrad.music;
-    });
-});
 
-buttons.forEach((button, idx) => {
-    button.addEventListener('click', () => {
-        if (idx === 4) descriptionsHTML[1].textContent = Szymon.aboutWork;
+        //Szymon 
+        else if (idx === 4) descriptionsHTML[1].textContent = Szymon.aboutWork;
         else if (idx === 5) descriptionsHTML[1].textContent = Szymon.aboutLife;
         else if (idx === 6) descriptionsHTML[1].textContent = Szymon.aboutSkills;
         else if (idx === 7) descriptionsHTML[1].innerHTML = Szymon.music;

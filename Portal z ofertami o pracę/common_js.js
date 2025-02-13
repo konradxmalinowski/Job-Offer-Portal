@@ -1,10 +1,24 @@
+/* eslint-disable no-unused-vars */
+
 // menu
 const navbarMenu = document.querySelectorAll('.navbar');
 const navbarButtons = document.querySelectorAll('.navbar-button');
 
-navbarMenu.forEach((navbar) => {
-  navbar.classList.add('hidden-navbar');
+function hideNavbar() {
+  navbarMenu.forEach((navbar) => {
+    navbar.classList.add('hidden-navbar');
+    navbar.style.display = 'none';
+  });
+
+}
+
+window.addEventListener('resize', () => {
+  hideNavbar();
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+  hideNavbar();
+})
 
 function toggleClass() {
   navbarMenu.forEach((navbar) => {

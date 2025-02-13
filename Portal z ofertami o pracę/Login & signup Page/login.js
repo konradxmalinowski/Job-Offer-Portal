@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 let emailInput = document.querySelector('#email');
 let passwordInput = document.querySelector('#password');
 

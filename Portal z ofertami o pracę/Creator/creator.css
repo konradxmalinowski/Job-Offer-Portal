@@ -26,6 +26,7 @@ main {
   margin: 0 auto;
 }
 
+/* form columns */
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -62,6 +63,7 @@ main h1 {
   left: 0;
 }
 
+/* form icons */
 .name-wrapper::before {
   content: url('images/login.png');
 }
@@ -87,7 +89,6 @@ main h1 {
 }
 
 /* colors */
-
 .colors {
   width: 80%;
   margin: 10px auto;

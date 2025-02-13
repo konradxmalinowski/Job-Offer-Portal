@@ -22,6 +22,7 @@ main {
   font-weight: 700;
 }
 
+/* cards wrapper */
 .cards-section {
   width: 100%;
   min-height: calc(100svh - 140px);
@@ -32,6 +33,7 @@ main {
   align-content: flex-start;
 }
 
+/* card */
 .about-cards {
   width: max(60%, 380px);
   max-width: 500px;
@@ -123,7 +125,6 @@ main {
 }
 
 /* services */
-
 .services-wrapper {
   width: 100%;
   min-height: 70svh;

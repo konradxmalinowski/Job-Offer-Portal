@@ -35,3 +35,7 @@ Moja lista to: [
 
 // **4**
 Wygeneruj logo dla firmy z ogłoszeniami pracy z dodatkami butelkowej zieleni
+
+
+// **5**
+Wygeneruj ikonę do strony: projekt-wit-portal.ct8.pl. Ma być bez tła, ciemna i z dodatkiem butelkowej zieleni

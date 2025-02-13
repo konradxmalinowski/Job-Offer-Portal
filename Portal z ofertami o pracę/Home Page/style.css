@@ -198,6 +198,7 @@ form {
   }
 }
 
+/* offers */
 .offer {
   height: 320px;
   min-width: 300px;
@@ -219,7 +220,7 @@ form {
 
 .offer h2 {
   font-weight: 800;
-  font-size: 28px;
+  font-size: 30px;
   text-align: center;
   color: var(--clr-primary-dark);
   margin-bottom: 5px;
@@ -228,11 +229,14 @@ form {
 .offer p {
   font-weight: 600;
   font-size: 20px;
-  color: var(--clr-primary-text);
   text-align: center;
 }
 
-.offer p:nth-child(3) {
+.offer p:nth-of-type(1) {
+  font-size: 25px;
+}
+
+.offer p:nth-of-type(2) {
   color: var(--clr-grey2);
   font-size: 18px;
 }

@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 let registerWrapper1 = document.querySelector('.create-account1');
 let registerWrapper2 = document.querySelector('.create-account2');
 

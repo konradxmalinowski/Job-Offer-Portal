@@ -31,10 +31,6 @@ html {
   color: var(--clr-primary-100);
 }
 
-.grey {
-  color: var(--clr-grey2);
-}
-
 .block {
   display: block;
   margin-bottom: 10px;
@@ -63,12 +59,6 @@ html {
 
 .bold {
   font-weight: 700;
-}
-
-.basic-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 body {
@@ -220,16 +210,18 @@ header {
 .navbar-button {
   background-color: transparent;
   border: none;
-  position: fixed;
+  position: absolute;
   right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 3;
   display: none;
 }
 
 .navbar-button,
 .menu-bar-icon {
-  width: 30px;
-  width: 30px;
+  width: 35px;
+  width: 35px;
 }
 
 .showed-navbar {
@@ -271,9 +263,51 @@ header {
 }
 
 .navbar :is(a, li) {
-  color: var(--clr-primary-font);
+  color: var(--clr-grey2);
   text-decoration: none;
   font-size: 20px;
+}
+
+.navbar a {
+  transition: color 0.3s ease-in-out 0s;
+  transition: margin-left 0.7s ease-in-out 0s;
+}
+
+.navbar li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 35%;
+  position: relative;
+}
+
+.navbar li img {
+  width: 30px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  right: 17%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+@media (width <= 500px) {
+  .navbar li img {
+    right: 30px;
+  }
+}
+
+.navbar li:hover > img {
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out 0s;
+}
+
+.navbar li:hover > a {
+  color: var(--clr-primary-font);
+  margin-left: 30px;
+  transition: color 0.3s ease-in-out 0s;
+  transition: margin-left 0.7s ease-in-out 0s;
 }
 
 /* main */
@@ -320,7 +354,7 @@ footer {
   width: 30px;
 }
 
-@media (width <=830px) {
+@media (width <=990px) {
   .navbar-button {
     display: block;
   }
@@ -346,6 +380,7 @@ footer {
   }
 }
 
+/* animations */
 @keyframes zoomIn {
   from {
     opacity: 1;
