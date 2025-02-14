@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 
-
 // daily offers
 const dailyOffersWrapper = document.querySelector('.daily-offers-wrapper');
 
@@ -15,7 +14,7 @@ dailyOffersWrapper.addEventListener('wheel', (event) => {
   }
 });
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
 // offers
 const offersWrapper = document.querySelector('.offers-wrapper');
 const loadMoreOffersButton = document.querySelector('.load-more-button');
@@ -27,7 +26,8 @@ window.addEventListener('DOMContentLoaded', () => {
   loadOffers(12).then(handleClickApplyButton)
 });
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - */
+
+
 // searching
 const searchInputs = document.querySelectorAll('.search-inputs');
 const options = document.querySelectorAll('.options');
@@ -104,7 +104,8 @@ findOffersButton.addEventListener('click', () => {
   loadOffers(12, searchFilters[0], searchFilters[1], searchFilters[2]);
 });
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
 
 // FIXME: create function fetchLanguages, get all HTML elements with content to translate
 // function changeLanguage() {

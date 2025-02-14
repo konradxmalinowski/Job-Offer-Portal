@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 
-function createApplyDialog(offersData, idx) {
+function returnApplyHTML(offersData, idx = 0) {
     return `
        <div class="exit"><img src="images/exit.png" alt="exit icon" id="exit"></div>
         <h1 class="job-title">${offersData[idx].name}</h1>
@@ -51,7 +51,7 @@ function createApplyDialog(offersData, idx) {
 function createApplySection(idx) {
     const section = document.createElement('section');
     section.className = 'apply-section';
-    section.innerHTML = createApplyDialog(offersData, idx);
+    section.innerHTML = returnApplyHTML(offersData, idx);
 
     document.body.appendChild(section);
     createdApplySections[idx] = section;
