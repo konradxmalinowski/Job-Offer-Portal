@@ -317,6 +317,7 @@ button {
   text-align: center;
   font-size: 48px;
   font-weight: 700;
+  padding: 10px;
 }
 
 .wrapper {
@@ -760,6 +761,33 @@ input[type='file']::file-selector-button:hover {
   }
 }
 
+.faq-section{
+  width: 100%;
+  padding: 80px 0;
+  background-color: var(--clr-primary-200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 0 30px 0;
+}
+
+.faq-question{
+  width: 70%;
+  border-radius: 4px 4px 0px 0px;
+  padding: 10px 0px 20px 20px;
+  font-size: 22px;
+  font-weight: 900;
+}
+.faq-answer{
+  width: 70%;
+  border-radius: 0px 0px 4px 4px;
+  padding: 5px 0px 20px 20px;
+  opacity: 50%;
+  font-size: 19px;
+  margin: 0 0 10px 0;
+}
+
 @media (max-width: 900px) {
   .apply-form input,
   .apply-form textarea {
@@ -782,6 +810,10 @@ input[type='file']::file-selector-button:hover {
     width: 130px;
     font-size: 14px;
     padding: 10px;
+  }
+  .faq-answer, .faq-question{
+    width: 100%;
+    padding: 5px 20px 20px 20px;
   }
 }
 
