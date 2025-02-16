@@ -78,7 +78,7 @@ Check yourself and join the community today! :smile:
     "benefits": "Dofinansowanie do karty sportowej, pakiet medyczny, bony świąteczne",
     "otherInformation": "Możliwość awansu, szkolenia wprowadzające"
   },
-  ....
+  ...
 ]
 ```
 
