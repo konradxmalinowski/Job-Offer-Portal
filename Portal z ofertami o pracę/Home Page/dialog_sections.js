@@ -108,17 +108,22 @@ function hideApplySection(idx) {
 }
 
 function handleClickApplyButton() {
-    let applyButtons = document.getElementsByClassName('apply-button-created');
-    Array.from(applyButtons).forEach((button, idx) => {
-        button.addEventListener('click', (event) => {
+    document.addEventListener('click', (event) => {
+        if (event.target.classList.contains('apply-button-created')) {
+            const button = event.target;
+            const idx = Array.from(document.querySelectorAll('.apply-button-created')).indexOf(button);
 
-            if (createdApplySections[idx])
+            if (createdApplySections[idx]) {
                 createdApplySections[idx].style.display = 'flex';
-            else createApplySection(idx);
+            } else {
+                createApplySection(idx);
+            }
 
-            let hideApplySectionButtons = document.querySelector('.exit');
-            hideApplySectionButtons.addEventListener('click', () => {
-                hideApplySection(idx);
+            let hideApplySectionButtons = document.querySelectorAll('.exit');
+            hideApplySectionButtons.forEach((exitButton) => {
+                exitButton.addEventListener('click', () => {
+                    hideApplySection(idx);
+                });
             });
 
             window.document.addEventListener('keydown', (event) => {
@@ -127,7 +132,6 @@ function handleClickApplyButton() {
                     button.blur();
                 }
             });
-        })
+        }
     });
 }
-

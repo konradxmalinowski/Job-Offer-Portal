@@ -240,6 +240,31 @@
               ]
             }
           ]
+        },
+        "faq-section": {
+          "header-text": "Frequently Asked Questions",
+          "questions": [
+            {
+              "question": "Can I apply for offers without creating an account?",
+              "answer": "In most cases, yes, if the employer has provided an email or phone contact."
+            },
+            {
+              "question": "Can I apply for offers without a CV?",
+              "answer": "In most cases, yes, if the employer does not require a CV."
+            },
+            {
+              "question": "Are all job offers up to date?",
+              "answer": "We strive to keep the listings always up to date. Employers have the option to remove or edit offers, and outdated listings are automatically archived after a certain period."
+            },
+            {
+              "question": "Can I apply for offers from abroad?",
+              "answer": "Yes, but you must be aware that the employer may require knowledge of a foreign language."
+            },
+            {
+              "question": "Can I filter offers according to my preferences?",
+              "answer": "Yes, our search engine allows you to filter offers by location, type of contract, industry, and other criteria to help you find the perfect job."
+            }
+          ]
         }
       }
     }

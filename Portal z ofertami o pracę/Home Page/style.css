@@ -420,7 +420,7 @@ button {
 /* medians of earnings */
 
 .median-earnings {
-  width: 50%;
+  width: max(50%, 300px);
   margin: 60px auto;
   padding: 30px;
   color: var(--clr-primary-font);
@@ -595,14 +595,66 @@ button {
 @media (width <=1200px) {
   .partners-cards-section {
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 15px;
+    row-gap: 15px;
+  }
+
+  .review-cards-section {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
   }
 }
 
 @media (width <=830px) {
   .partners-cards-section {
     grid-template-columns: 1fr;
-    grid-row-gap: 15px;
+    row-gap: 15px;
+  }
+}
+
+@media (width <= 400px) {
+  .review-cards-section {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .review-card {
+    width: min(90vw, 300px);
+  }
+}
+
+.faq-section {
+  width: 100%;
+  padding: 80px 0;
+  background-color: var(--clr-primary-200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 0 100px 0;
+}
+
+.faq-question {
+  width: 50%;
+  border-radius: 4px 4px 0px 0px;
+  padding: 10px 0px 20px 20px;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.faq-answer {
+  width: 50%;
+  border-radius: 0px 0px 4px 4px;
+  padding: 5px 0px 20px 20px;
+  opacity: 50%;
+  font-size: 19px;
+  margin: 0 0 10px 0;
+}
+
+@media (max-width: 600px) {
+  .faq-answer,
+  .faq-question {
+    width: 100%;
+    padding: 5px 20px 20px 20px;
   }
 }
 
@@ -766,41 +818,7 @@ input[type='file']::file-selector-button:hover {
   }
 }
 
-.faq-section{
-  width: 100%;
-  padding: 80px 0;
-  background-color: var(--clr-primary-200);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 0 30px 0;
-}
-
-.faq-question{
-  width: 70%;
-  border-radius: 4px 4px 0px 0px;
-  padding: 10px 0px 20px 20px;
-  font-size: 22px;
-  font-weight: 900;
-}
-.faq-answer{
-  width: 70%;
-  border-radius: 0px 0px 4px 4px;
-  padding: 5px 0px 20px 20px;
-  opacity: 50%;
-  font-size: 19px;
-  margin: 0 0 10px 0;
-}
-
-@media (max-width: 900px) {
-  .apply-form input,
-  .apply-form textarea {
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 600px) {
+@media (width <= 600px) {
   .apply-form label {
     font-size: 13px;
   }
@@ -816,9 +834,12 @@ input[type='file']::file-selector-button:hover {
     font-size: 14px;
     padding: 10px;
   }
-  .faq-answer, .faq-question{
-    width: 100%;
-    padding: 5px 20px 20px 20px;
+}
+
+@media (width <= 900px) {
+  .apply-form input,
+  .apply-form textarea {
+    font-size: 13px;
   }
 }
 

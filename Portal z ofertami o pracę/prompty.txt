@@ -52,4 +52,7 @@ Zapisz w js w obiekcie elementy, które będą uzupełnione zgodnie z plikiem js
 Przetłumacz na polski ale tylko treść (plik en.json)
 
 // ** 8 **
-Usuń TYLKO treść (nie usuwaj klas, id, zdjęć itp)
+Usuń TYLKO treść (nie usuwaj klas, id, zdjęć, itp)
+
+// ** 9 **
+Napisz mi kod, dzięki któremu będzie mozliwe przewijanie daily ofert na telefonie

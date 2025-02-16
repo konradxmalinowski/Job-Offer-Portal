@@ -16,6 +16,34 @@ dailyOffersWrapper.addEventListener('wheel', (event) => {
 });
 
 
+// Touch events for mobile devices
+let isDown = false;
+let startX;
+let scrollLeft;
+
+dailyOffersWrapper.addEventListener('touchstart', (event) => {
+    isDown = true;
+    startX = event.touches[0].pageX - dailyOffersWrapper.offsetLeft;
+    scrollLeft = dailyOffersWrapper.scrollLeft;
+});
+
+dailyOffersWrapper.addEventListener('touchmove', (event) => {
+    if (!isDown) return;
+    event.preventDefault();
+    const x = event.touches[0].pageX - dailyOffersWrapper.offsetLeft;
+    const walk = (x - startX) * 2; // Scroll-fast
+    dailyOffersWrapper.scrollLeft = scrollLeft - walk;
+});
+
+dailyOffersWrapper.addEventListener('touchend', () => {
+    isDown = false;
+});
+
+dailyOffersWrapper.addEventListener('touchcancel', () => {
+    isDown = false;
+});
+
+
 
 let dailySectionHTML = document.createElement('section');
 const dailyOfferObjectEN = [

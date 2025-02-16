@@ -137,6 +137,17 @@ function fillHomePage(data) {
                 card.querySelector('.review').textContent = reviewData["review"];
             }
         });
+
+        // Fill FAQ section
+        const faqSection = document.querySelector('.faq-section');
+        faqSection.querySelector('.header-text').textContent = mainContent["faq-section"]["header-text"];
+        const faqQuestions = mainContent["faq-section"]["questions"];
+        faqSection.querySelectorAll('.faq-question').forEach((questionElement, index) => {
+            questionElement.textContent = faqQuestions[index].question;
+        });
+        faqSection.querySelectorAll('.faq-answer').forEach((answerElement, index) => {
+            answerElement.textContent = faqQuestions[index].answer;
+        });
     }
 }
 
@@ -191,7 +202,7 @@ function fillPage404(data) {
     const stars = document.querySelector('.stars');
     const oopsText = document.querySelector('.oops-text');
     const notFoundText = document.querySelectorAll('.not-found-text');
-    const backToHomepageLink = document.querySelector('.back-to-homepage-link');
+    const backToHomepageLink = document.querySelector('.back-to-homepage-link > a');
     const page404Data = data.find(page => page.name === "Page 404");
     if (page404Data) {
         oopsText.textContent = page404Data.content.main["page-not-found-section"]["oops-text"];
@@ -292,14 +303,46 @@ async function fetchLanguage(lang) {
     }
 }
 
+function changeFlag() {
+    const langImage = document.querySelector('.lang-set img');
+    if (browserDefaultLanguage.includes('pl')) {
+        langImage.setAttribute('src', '../Common images/poland.png');
+        return;
+    }
+
+    langImage.setAttribute('src', '../Common images/english.png');
+}
+
+function changeHTMLAttribute() {
+    if (browserDefaultLanguage.includes('pl')) {
+        document.querySelector('html').setAttribute('lang', 'pl');
+        return;
+    }
+
+    document.querySelector('html').setAttribute('lang', 'en');
+}
+
 function changeLanguage(idx) {
     if (idx === 0) {
-        fetchLanguage('pl');
+        if (browserDefaultLanguage.includes('pl')) {
+            return;
+        }
+
         browserDefaultLanguage = 'pl';
+        fetchLanguage('pl');
+        changeFlag();
+        changeHTMLAttribute();
+
     }
     if (idx === 1) {
-        fetchLanguage('en');
+        if (browserDefaultLanguage.includes('en')) {
+            return;
+        }
+
         browserDefaultLanguage = 'en';
+        fetchLanguage('en');
+        changeFlag();
+        changeHTMLAttribute();
     }
 }
 
@@ -313,3 +356,5 @@ function loadDefaultLanguage() {
 }
 
 loadDefaultLanguage();
+changeHTMLAttribute();
+if (document.title != 'Page not found') changeFlag();

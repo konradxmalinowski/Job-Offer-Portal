@@ -243,6 +243,32 @@
               ]
             }
           ]
+        },
+
+        "faq-section": {
+          "header-text": "Najczęściej zadawane pytania",
+          "questions": [
+            {
+              "question": "Czy mogę aplikować na oferty bez zakładania konta?",
+              "answer": "W większości przypadków tak, jeśli pracodawca udostępnił kontakt e-mailowy lub telefoniczny."
+            },
+            {
+              "question": "Czy mogę aplikować na oferty bez CV?",
+              "answer": "W większości przypadków tak, jeśli pracodawca nie wymaga CV."
+            },
+            {
+              "question": "Czy wszystkie oferty pracy są aktualne?",
+              "answer": "Staramy się, aby ogłoszenia były zawsze aktualne. Pracodawcy mają możliwość usunięcia lub edytowania ofert, a nieaktualne ogłoszenia są automatycznie archiwizowane po określonym czasie."
+            },
+            {
+              "question": "Czy mogę aplikować na oferty z zagranicy?",
+              "answer": "Tak, ale musisz liczyć się z tym, że pracodawca może wymagać znajomości języka obcego."
+            },
+            {
+              "question": "Czy mogę filtrować oferty według moich preferencji?",
+              "answer": "Tak, nasza wyszukiwarka pozwala na filtrowanie ofert według lokalizacji, rodzaju umowy, branży i innych kryteriów, aby ułatwić znalezienie idealnej pracy."
+            }
+          ]
         }
       }
     }
