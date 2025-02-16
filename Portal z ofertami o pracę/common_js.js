@@ -1,5 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
+
+
 let browserDefaultLanguage = navigator.language;
 
 // menu
@@ -11,25 +13,22 @@ function hideNavbar() {
     navbar.classList.add('hidden-navbar');
     navbar.style.display = 'none';
   });
-
 }
 
 window.addEventListener('resize', () => {
   hideNavbar();
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-  hideNavbar();
-})
+hideNavbar();
 
 function toggleClass() {
   navbarMenu.forEach((navbar) => {
-    let isClass = navbar.classList.contains('showed-navbar');
+    let isClass = navbar.classList.contains('shown-navbar');
 
     if (isClass) {
       setTimeout(() => {
         navbar.classList.add('hidden-navbar');
-        navbar.classList.remove('showed-navbar');
+        navbar.classList.remove('shown-navbar');
       }, 0);
 
       setTimeout(() => {
@@ -37,7 +36,7 @@ function toggleClass() {
       }, 750);
     } else {
       setTimeout(() => {
-        navbar.classList.add('showed-navbar');
+        navbar.classList.add('shown-navbar');
         navbar.classList.remove('hidden-navbar');
       }, 0);
 

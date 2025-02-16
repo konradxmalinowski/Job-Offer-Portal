@@ -140,7 +140,8 @@ function fillHomePage(data) {
 
         // Fill FAQ section
         const faqSection = document.querySelector('.faq-section');
-        faqSection.querySelector('.header-text').textContent = mainContent["faq-section"]["header-text"];
+        const faqWrapper = document.querySelector('.faq-wrapper');
+        faqWrapper.querySelector('.header-text').textContent = mainContent["faq-section"]["header-text"];
         const faqQuestions = mainContent["faq-section"]["questions"];
         faqSection.querySelectorAll('.faq-question').forEach((questionElement, index) => {
             questionElement.textContent = faqQuestions[index].question;

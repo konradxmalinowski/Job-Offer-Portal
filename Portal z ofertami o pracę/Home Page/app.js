@@ -7,9 +7,6 @@ const loadMoreOffersButton = document.querySelector('.load-more-button');
 let offersData = [];
 let createdApplySections = [];
 
-
-
-
 // searching
 const searchInputs = document.querySelectorAll('.search-inputs');
 const options = document.querySelectorAll('.options');
@@ -39,7 +36,7 @@ function showInputOptions() {
 
 function fillEmptyInput() {
   options.forEach((option, idx) => {
-    if (option.textContent != '') {
+    if (option.textContent !== '') {
       return;
     }
 
@@ -103,3 +100,35 @@ fillInputIfChosen();
 handleLoadMoreOffersClick();
 clearInputsButton.onclick = clearInputs;
 findOffersButton.onclick = findMatchingOffers;
+
+
+
+// faq
+const faqSigns = document.querySelectorAll('.sign');
+document.addEventListener('click', event => {
+  if (!event.target.classList.contains('sign')) {
+    return;
+  }
+
+  let index = showAnswer();
+  const sign = document.querySelectorAll(`.sign`);
+  sign[index].classList.toggle('rotated');
+
+  hideOtherQuestions(index);
+});
+
+function showAnswer() {
+  let index = [...document.querySelectorAll('.sign')].indexOf(event.target);
+  let answer = document.querySelector(`.faq:nth-of-type(${index + 1}) .faq-answer`);
+  answer.classList.toggle('shown');
+
+  return index;
+}
+
+function hideOtherQuestions(index) {
+  let otherQuestions = document.querySelectorAll(`.faq:not(:nth-of-type(${index + 1})) .faq-answer`);
+
+  otherQuestions.forEach(el => {
+    el.classList.remove('shown', 'hidden');
+  })
+}

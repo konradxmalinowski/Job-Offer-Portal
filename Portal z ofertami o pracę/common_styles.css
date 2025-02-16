@@ -25,6 +25,13 @@ html {
   font-style: normal;
 }
 
+body {
+  width: 100%;
+  min-height: 100svh;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-font-2);
+}
+
 /* classes for all elements  */
 
 .green {
@@ -68,13 +75,6 @@ a {
 
 button:hover {
   cursor: pointer;
-}
-
-body {
-  width: 100%;
-  min-height: 100svh;
-  background-color: var(--clr-primary-400);
-  color: var(--clr-font-2);
 }
 
 /* header */
@@ -165,6 +165,10 @@ header {
   cursor: pointer;
 }
 
+.lang-list > * {
+  cursor: pointer;
+}
+
 .nav-horizontal-list {
   list-style: none;
   display: flex;
@@ -221,13 +225,23 @@ header {
   opacity: 100%;
 }
 
+@media (width <= 400px) {
+  .register-button {
+    margin: 0 8px;
+  }
+
+  .button-inside-style {
+    padding: 16px 5px;
+  }
+}
+
 .navbar-button {
   background-color: transparent;
   border: none;
   position: absolute;
   right: 20px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-60%);
   z-index: 3;
   display: none;
 }
@@ -238,12 +252,12 @@ header {
   width: 35px;
 }
 
-.showed-navbar {
-  animation: showNavbar 0.7s ease-in-out 0s 1 normal forwards;
+.shown-navbar {
+  animation: showNavbar 0.5s ease-in-out 0s 1 normal forwards;
 }
 
 .hidden-navbar {
-  animation: hideNavbar 0.7s ease-in-out 0s 1 normal forwards;
+  animation: hideNavbar 0.5s ease-in-out 0s 1 normal forwards;
 }
 
 /* burger menu */

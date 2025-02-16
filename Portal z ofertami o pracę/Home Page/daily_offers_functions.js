@@ -9,9 +9,9 @@ dailyOffersWrapper.addEventListener('wheel', (event) => {
     event.preventDefault();
 
     if (event.deltaY > 0) {
-        dailyOffersWrapper.scrollLeft += 100;
+        dailyOffersWrapper.scrollLeft += 80;
     } else {
-        dailyOffersWrapper.scrollLeft -= 100;
+        dailyOffersWrapper.scrollLeft -= 80;
     }
 });
 
@@ -31,7 +31,7 @@ dailyOffersWrapper.addEventListener('touchmove', (event) => {
     if (!isDown) return;
     event.preventDefault();
     const x = event.touches[0].pageX - dailyOffersWrapper.offsetLeft;
-    const walk = (x - startX) * 2; // Scroll-fast
+    const walk = (x - startX) * 1.5; // Scroll-fast
     dailyOffersWrapper.scrollLeft = scrollLeft - walk;
 });
 
