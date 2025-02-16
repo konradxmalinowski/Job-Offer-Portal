@@ -5,7 +5,7 @@ Check yourself and join the community today! :smile:
 
 ---
 
-### Kontakt
+### Contact
 
 - **Email**
   - _konradmalinowski@zsezdw.onmicrosoft.com_
@@ -78,7 +78,7 @@ Check yourself and join the community today! :smile:
     "benefits": "Dofinansowanie do karty sportowej, pakiet medyczny, bony świąteczne",
     "otherInformation": "Możliwość awansu, szkolenia wprowadzające"
   },
-  ....
+  ...
 ]
 ```
 
