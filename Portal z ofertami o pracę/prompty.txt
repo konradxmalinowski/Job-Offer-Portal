@@ -39,3 +39,17 @@ Wygeneruj logo dla firmy z ogłoszeniami pracy z dodatkami butelkowej zieleni
 
 // **5**
 Wygeneruj ikonę do strony: projekt-wit-portal.ct8.pl. Ma być bez tła, ciemna i z dodatkiem butelkowej zieleni
+
+// ** 6 **
+Dopisz do about treść z pliku index.html. Masz dopisać tylko to co jest widoczne (bez header i footer)
+
+
+// ** 7 **
+Zapisz w js w obiekcie elementy, które będą uzupełnione zgodnie z plikiem json (bez header i footer). Pisz tylko te, które są nowe
+
+
+// ** 7 **
+Przetłumacz na polski ale tylko treść (plik en.json)
+
+// ** 8 **
+Usuń TYLKO treść (nie usuwaj klas, id, zdjęć itp)

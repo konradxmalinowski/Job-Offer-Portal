@@ -59,7 +59,7 @@ body {
 .back-to-homepage-link {
   background-color: var(--clr-primary);
   height: 35px;
-  width: 180px;
+  width: fit-content;
   padding: 23px;
   border-radius: 30px;
   color: var(--clr-font-2);
@@ -70,12 +70,6 @@ body {
   border: none;
   z-index: 3;
   opacity: 80%;
-
-  &:hover {
-    width: 210px;
-    transition: width 0.2s ease-in-out;
-    opacity: 90%;
-  }
 }
 
 .oops-text span {

@@ -1,10 +1,396 @@
 [
   {
-    "name": "creator.html",
-    "content": {}
+    "name": "About",
+    "content": {
+      "main": {
+        "header-text": "Who are the website developers?",
+        "cards-section": [
+          {
+            "name": "Konrad Malinowski",
+            "job-name": "Fullstack Engineer"
+          },
+          {
+            "name": "Szymon Kubiak",
+            "job-name": "Frontend Engineer"
+          }
+        ],
+        "services-wrapper": {
+          "title": "Our services",
+          "services": [
+            {
+              "button": "Read More"
+            },
+            {
+              "title": "Web Development",
+              "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae quis magnam suscipit officiis doloribus quam pariatur, provident minus nisi. Eius. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            },
+            {
+              "title": "Graphic Design",
+              "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae quis magnam suscipit officiis doloribus quam pariatur, provident minus nisi. Eius. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            },
+            {
+              "title": "Digital Marketing",
+              "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae quis magnam suscipit officiis doloribus quam pariatur, provident minus nisi. Eius. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            }
+          ]
+        }
+      }
+    }
   },
   {
-    "name": "index.html",
-    "content": {}
+    "name": "Creator",
+    "content": {
+      "main": {
+        "title": "CV Creator",
+        "form-wrapper": {
+          "left-wrapper": {
+            "name-wrapper": {
+              "label": "Name",
+              "input-placeholder": "Type your name"
+            },
+            "surname-wrapper": {
+              "label": "Surname",
+              "input-placeholder": "Type your surname"
+            },
+            "skills-wrapper": {
+              "label": "Skills"
+            },
+            "color-wrapper": {
+              "title": "Choose color"
+            }
+          },
+          "right-wrapper": {
+            "birth-wrapper": {
+              "label": "Birth date"
+            },
+            "email-wrapper": {
+              "label": "Email",
+              "input-placeholder": "Type your email"
+            },
+            "telephone-wrapper": {
+              "label": "Phone number",
+              "input-placeholder": "Type your phone number"
+            },
+            "submit-wrapper": {
+              "button": "Create"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Home Page",
+    "content": {
+      "main": {
+        "welcome-section": {
+          "title": "Best Offers",
+          "subtitle": "from the best employers",
+          "button": "Go"
+        },
+        "search-section": {
+          "header-text": "Here you will find your dream job",
+          "searching-bar": {
+            "form": {
+              "search-inputs1": {
+                "custom-list1": [
+                  "Store Assistant",
+                  "Cashier",
+                  "Courier",
+                  "Train Operator",
+                  "Store Clerk"
+                ]
+              },
+              "search-inputs2": {
+                "custom-list2": [
+                  "Biedronka",
+                  "Inpost",
+                  "Lidl",
+                  "PKP Cargo",
+                  "McDonald's"
+                ]
+              },
+              "search-inputs3": {
+                "custom-list3": [
+                  "Warsaw",
+                  "Kraków",
+                  "Gdynia",
+                  "Kielce",
+                  "Lublin"
+                ]
+              }
+            }
+          },
+          "offers-buttons": {
+            "search-button": "Search",
+            "clear-button": "Clear"
+          }
+        },
+        "offers-zone-wrapper": {
+          "title": "Offers Zone",
+          "load-more-button": "Load more"
+        },
+        "offers-section": {
+          "header-text": "Offers of the Day",
+          "daily-offers-wrapper": {
+            "daily-offers": [
+              {
+                "day-offer-list": [
+                  "Manager",
+                  "Employment contract",
+                  "Lidl",
+                  "Łódź, Zduńska Wola, Sieradz"
+                ],
+                "apply-button": "Apply"
+              }
+            ]
+          }
+        },
+        "median-earnings": {
+          "title": "Median Earnings",
+          "median-box": [
+            {
+              "job-title": "Store Clerk",
+              "salary": "2800 PLN"
+            },
+            {
+              "job-title": "Train Operator",
+              "salary": "4500 PLN"
+            },
+            {
+              "job-title": "Cashier",
+              "salary": "2600 PLN"
+            },
+            {
+              "job-title": "Store Assistant",
+              "salary": "2700 PLN"
+            },
+            {
+              "median-result": {
+                "job-title": "Median",
+                "salary": "2750 PLN"
+              }
+            }
+          ]
+        },
+        "partners-section": {
+          "header-text": "Our Partners",
+          "partners-cards-section": [
+            {
+              "partner-card": "Amazon"
+            },
+            {
+              "partner-card": "Biedronka"
+            },
+            {
+              "partner-card": "McDonald"
+            },
+            {
+              "partner-card": "Lidl"
+            },
+            {
+              "partner-card": "InPost"
+            },
+            {
+              "partner-card": "PKP Cargo"
+            }
+          ]
+        },
+        "reviews-section": {
+          "header-text": "User Reviews",
+          "review-cards-section": [
+            {
+              "reviews-column": [
+                {
+                  "review-card": {
+                    "reviewer-name": "Janusz",
+                    "review": "I was skeptical about vacuum cleaners after the introduction of European power standards. In the case of Electrolux, it was completely unnecessary. The suction power adjusts to the surface it is currently working on. I needed a vacuum cleaner for an allergy sufferer, so there wasn't much choice. The vacuum is super quiet, you can talk while it's working. At minimal suction power, it's almost silent. Too bad the manufacturer didn't include storage for the attachments."
+                  }
+                },
+                {
+                  "review-card": {
+                    "reviewer-name": "Krzysztof",
+                    "review": "#opinionmotivatedbyreward The vacuum is really quiet. Lightweight and handy. Additionally, the design is really pleasing to the eye. It works both on floors and carpets. The Smart function is really great. It prevented me from sucking up a sock :)"
+                  }
+                },
+                {
+                  "review-card": {
+                    "reviewer-name": "Konrad",
+                    "review": "The purchased vacuum cleaner definitely meets my expectations! It's extremely efficient, quiet, and easy to use. Its suction power makes cleaning quick and effective, and the various attachments allow me to reach hard-to-access places. I definitely recommend it to anyone looking for a solid and functional cleaning device. #opinionmotivatedbyreward"
+                  }
+                },
+                {
+                  "review-card": {
+                    "reviewer-name": "Marek",
+                    "review": "I'm satisfied. The quiet operation is impressive, and the suction is sufficient. In short: it's perfect! If it lasts as long as the previous Electrolux (15 years), can I expect more?"
+                  }
+                },
+                {
+                  "review-card": {
+                    "reviewer-name": "Anna",
+                    "review": "Once again, we are pleasantly surprised by the Electrolux vacuum cleaner, it's super quiet, the Smart function is incredibly useful when switching between panels and carpet, the control in the handle is a nice idea, it's wireless, much lighter than the previous model. The only downside is the small brush attached to the handle, not very convenient, but otherwise, it's great."
+                  }
+                },
+                {
+                  "review-card": {
+                    "reviewer-name": "Szymon",
+                    "review": "I highly recommend the purchase 100%. The current version is even quieter, lighter, and much friendlier to the household thanks to the quieter operation. I also have an older version with a 650W motor and 58db, but... the older model, although more powerful, was louder and had weaker suction, and on top of that, the wheels were a mix of plastic and rubber, so it was harder to move and made more noise. Another plus in the new version is definitely the richer starter kit. #opinionmotivatedbyreward"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Login & signUp page",
+    "data": [
+      {
+        "name": "Login",
+        "content": {
+          "main": {
+            "title": "Log in",
+            "form": {
+              "email": {
+                "placeholder": "Your email"
+              },
+              "password": {
+                "placeholder": "Your password"
+              },
+              "login-button": "Log in",
+              "agree": "I have read and accept the website regulations",
+              "continue-with-google": "Continue with Google",
+              "continue-with-facebook": "Continue with Facebook"
+            }
+          }
+        }
+      },
+      {
+        "name": "SignUp",
+        "content": {
+          "main": {
+            "create-account1": {
+              "title": "Sign up",
+              "form": {
+                "email": {
+                  "placeholder": "Your email"
+                },
+                "continue-button": "Continue",
+                "continue-with-google": "Continue with Google",
+                "continue-with-facebook": "Continue with Facebook"
+              }
+            },
+            "create-account2": {
+              "title": "Create password",
+              "form": {
+                "password": {
+                  "placeholder": "Your new password"
+                },
+                "create-account-button": "Create account",
+                "agree": "I have read and accept the website regulations"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Page 404",
+    "content": {
+      "main": {
+        "page-not-found-section": {
+          "oops-text": "Oops!",
+          "not-found-text": [
+            "404 - Page not found",
+            "It looks like you got lost. Return to home page."
+          ],
+          "back-to-homepage-link": "Go to homepage"
+        }
+      }
+    }
+  },
+  {
+    "name": "Partners",
+    "content": {
+      "main": {
+        "header-text": "Our Partners",
+        "cards-section": [
+          {
+            "company-name": "InPost",
+            "description": "InPost is a leader in the logistics industry, known for its popular Parcel Lockers and innovative courier solutions. The company is dynamically developing, offering stable employment and the opportunity to work in an innovative environment. InPost employees can count on attractive salaries, a benefits package, and opportunities for advancement. The company is looking for both couriers and specialists in logistics, IT, and customer service. InPost values commitment, a modern approach to technology, and teamwork."
+          },
+          {
+            "company-name": "Biedronka",
+            "description": "Biedronka is the largest grocery store chain in Poland, belonging to the Jerónimo Martins group. The company offers stable employment, attractive salaries, and a benefits package, including private medical care and holiday vouchers. Working at Biedronka provides opportunities for growth in a dynamic environment, numerous training sessions, and a clear career path. The chain is looking for employees for cashier, warehouse, and managerial positions, offering flexible schedules and a friendly atmosphere."
+          },
+          {
+            "company-name": "PKP Cargo",
+            "description": "PKP Cargo is the largest rail freight operator in Poland and one of the leaders in Europe. The company offers stable employment, competitive salaries, and a benefits package, including life insurance and social benefits. Working at PKP Cargo provides opportunities for growth in the transport and logistics industry, both in operational and office positions. The company focuses on modern technologies, safety, and the professional development of its employees."
+          },
+          {
+            "company-name": "Lidl",
+            "description": "Lidl is an international supermarket chain known for high-quality products and competitive prices. The company offers attractive salaries, stable employment, and a benefits package, including private medical care and life insurance. Lidl focuses on employee development, providing numerous training sessions and opportunities for advancement. Working at Lidl offers a dynamic environment, flexible schedules, and good working conditions for cashiers, store managers, and logistics center employees."
+          },
+          {
+            "company-name": "Amazon",
+            "description": "Amazon is a global leader in e-commerce and technology, offering a wide range of products and services such as Amazon Web Services (AWS) and Amazon Prime. The company employs thousands of workers in various positions, from warehouse workers to IT specialists. Working at Amazon provides access to modern technologies, a dynamic environment, and attractive benefits, including private medical care and training programs. Amazon values innovation, efficiency, and customer care, providing stable employment in modern logistics centers."
+          },
+          {
+            "company-name": "McDonald’s",
+            "description": "McDonald’s is one of the largest fast-food restaurant chains in the world, known for its popular burgers, fries, and drinks. The company offers flexible schedules, stable employment, and numerous opportunities for professional development, both for restaurant staff and management. McDonald’s focuses on teamwork, training, and a clear path for advancement. It is a great place for those looking for their first job and those who want to build a career in the food industry."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "Common",
+    "content": {
+      "header": {
+        "wide-section": {
+          "nav": {
+            "nav-horizontal-list": [
+              "Home",
+              "Partners",
+              "About us",
+              "Job offers",
+              "CV Creator",
+              "Reviews"
+            ]
+          }
+        },
+        "narrow-section-login": {
+          "login-button": "Login",
+          "register-button": "Register"
+        },
+        "navbar-button": {
+          "menu-bar-icon": "menu-bar-icon"
+        },
+        "navbar": {
+          "nav-list": [
+            "Home",
+            "Partners",
+            "About us",
+            "Job offers",
+            "CV Creator",
+            "Reviews"
+          ]
+        }
+      },
+      "footer": {
+        "bottom-section": {
+          "nav-horizontal-list": [
+            "Availability Hours",
+            "Privacy",
+            "Terms",
+            "Developers",
+            "Reviews"
+          ]
+        }
+      }
+    }
   }
 ]

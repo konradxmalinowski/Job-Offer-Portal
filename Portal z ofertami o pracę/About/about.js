@@ -13,9 +13,9 @@ function Developer(name, aboutWork, aboutLife, aboutSkills, music) {
 
 let descriptions = [];
 descriptions['Konrad'] = [
-    'Jestem web developerem specjalizującym się w technologiach frontendowych i backendowych. Tworzę nowoczesne strony internetowe oraz aplikacje webowe.',
-    'Poza programowaniem interesuję się nowinkami technologicznymi i rozwijam swoje portfolio. Lubię także fotografię i gry komputerowe.',
-    'Moje umiejętności obejmują HTML, CSS, JavaScript, React, a także zarządzanie serwerami i bazami danych. Ciągle rozwijam swoje kompetencje.',
+    'I am a web developer specializing in front and backend technologies. I create modern websites and web applications.',
+    'In addition to programming, I am interested in technological innovations and develop my portfolio. I also like photography and computer games.',
+    'My skills include HTML, CSS, JavaScript, React, as well as servers and database management. I am constantly developing my competences.',
     '<iframe style="border-radius:12px;" src="https://open.spotify.com/embed/track/3dxiWIBVJRlqh9xk144rf4?utm_source=generator&theme=0" width="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
 ];
 descriptions['Szymon'] = [

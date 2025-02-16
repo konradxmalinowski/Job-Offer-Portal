@@ -127,12 +127,13 @@ main {
 /* services */
 .services-wrapper {
   width: 100%;
-  min-height: 70svh;
+  min-height: 40svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   row-gap: 80px;
+  padding: 50px 0;
 }
 
 .services-wrapper > h2 {

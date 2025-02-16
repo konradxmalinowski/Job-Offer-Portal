@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // inputs
 const emailInput = document.querySelector('#email');
 const nameInput = document.querySelector('#name');
@@ -14,6 +15,7 @@ let checked = new Array(5).fill(false);
 
 // messages content
 const namesOfIndexEN = ['name', 'surname', 'skills', 'birth date', 'email', 'phone number'];
+const namesOfIndexPL = ['imię', 'nazwisko', 'umiejętności', 'data urodzenia', 'email', 'numer telefonu'];
 
 // Regular expressions
 const emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
@@ -26,7 +28,8 @@ const crateButton = document.querySelector('#create-button');
 
 function validateInputValue(regEx, data, message) {
     if (data === '') {
-        showMessage("Every field must be filled");
+        browserDefaultLanguage.includes('pl') ? showMessage("Wypełnij wszystkie pola") :
+            showMessage("Every field must be filled");
         return;
     }
 
@@ -37,9 +40,19 @@ function validateInputValue(regEx, data, message) {
 }
 
 function validateData() {
+    if (browserDefaultLanguage.includes('pl')) {
+        validateInputValue(emailRegEx, emailInput.value, 'Niepoprawny format email.');
+        validateInputValue(telRegEx, telInput.value, 'Telefon: +XX XXX XXX XXX lub podobnie.');
+        validateInputValue(dateRegEx, birthInput.value, 'Data: YYYY-MM-DD lub podobnie.');
+        validateInputValue(nameRegEx, nameInput.value, 'Imię: 3-30 liter/cyfr.');
+        validateInputValue(nameRegEx, surnameInput.value, 'Nazwisko: 3-30 liter/cyfr.');
+
+        showMessage('Poprawne dane');
+        return;
+    }
+
     validateInputValue(emailRegEx, emailInput.value, 'Invalid email format.');
     validateInputValue(telRegEx, telInput.value, 'Phone: +XX XXX XXX XXX or similar.');
-    // 
     validateInputValue(dateRegEx, birthInput.value, 'Date: YYYY-MM-DD or similar.');
     validateInputValue(nameRegEx, nameInput.value, 'Name: 3-30 letters/numbers.');
     validateInputValue(nameRegEx, surnameInput.value, 'Surname: 3-30 letters/numbers.');
@@ -73,8 +86,16 @@ function createCV() {
 
     if (userData.some((inputValue) => inputValue === '')) {
         userData.forEach((data, idx) => {
-            if (data == '') invalidData.push(namesOfIndexEN[idx]);
+            if (data == '') {
+                invalidData.push(browserDefaultLanguage.includes('pl') ? namesOfIndexPL[idx] : namesOfIndexEN[idx]);
+            }
         });
+
+        if (browserDefaultLanguage.includes('pl')) {
+            showMessage(`Wprowadź dane w pola:`, `${[...invalidData].join(', ')}`);
+            return;
+        }
+
         showMessage(`Enter data in field:`, `${[...invalidData].join(', ')}`);
     }
 }

@@ -1,4 +1,6 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
+let browserDefaultLanguage = navigator.language;
 
 // menu
 const navbarMenu = document.querySelectorAll('.navbar');
@@ -51,6 +53,7 @@ function toggleClass() {
 const langSets = document.querySelectorAll('.lang-set');
 const langlistMenu = document.querySelectorAll('.lang-list');
 const arrowDown = document.querySelector('img[alt="arrow-down"]');
+const langlist = document.querySelectorAll('.lang-list span');
 
 function toggleLang() {
   langlistMenu.forEach((langlist) => {
@@ -76,6 +79,12 @@ langSets.forEach((langSet) => {
 
 navbarButtons.forEach((navbarButton) => {
   navbarButton.onclick = toggleClass;
+});
+
+langlist.forEach((lang, idx) => {
+  lang.onclick = () => {
+    changeLanguage(idx);
+  }
 });
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

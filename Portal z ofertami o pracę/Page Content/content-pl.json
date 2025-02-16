@@ -1,0 +1,399 @@
+[
+  {
+    "name": "About",
+    "content": {
+      "main": {
+        "header-text": "Kim są twórcy strony?",
+        "cards-section": [
+          {
+            "name": "Konrad Malinowski",
+            "job-name": "Inżynier Fullstack"
+          },
+          {
+            "name": "Szymon Kubiak",
+            "job-name": "Inżynier Frontend"
+          }
+        ],
+        "services-wrapper": {
+          "title": "Nasze usługi",
+          "services": [
+            {
+              "button": "Czytaj więcej"
+            },
+            {
+              "title": "Tworzenie stron internetowych",
+              "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae quis magnam suscipit officiis doloribus quam pariatur, provident minus nisi. Eius. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            },
+            {
+              "title": "Projektowanie graficzne",
+              "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae quis magnam suscipit officiis doloribus quam pariatur, provident minus nisi. Eius. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            },
+            {
+              "title": "Marketing cyfrowy",
+              "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae quis magnam suscipit officiis doloribus quam pariatur, provident minus nisi. Eius. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Creator",
+    "content": {
+      "main": {
+        "title": "Kreator CV",
+        "form-wrapper": {
+          "left-wrapper": {
+            "name-wrapper": {
+              "label": "Imię",
+              "input-placeholder": "Wpisz swoje imię"
+            },
+            "surname-wrapper": {
+              "label": "Nazwisko",
+              "input-placeholder": "Wpisz swoje nazwisko"
+            },
+            "skills-wrapper": {
+              "label": "Umiejętności"
+            },
+            "color-wrapper": {
+              "title": "Wybierz kolor"
+            }
+          },
+          "right-wrapper": {
+            "birth-wrapper": {
+              "label": "Data urodzenia"
+            },
+            "email-wrapper": {
+              "label": "Email",
+              "input-placeholder": "Wpisz swój email"
+            },
+            "telephone-wrapper": {
+              "label": "Numer telefonu",
+              "input-placeholder": "Wpisz swój numer telefonu"
+            },
+            "submit-wrapper": {
+              "button": "Utwórz"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Home Page",
+    "content": {
+      "main": {
+        "welcome-section": {
+          "title": "Najlepsze oferty",
+          "subtitle": "od najlepszych pracodawców",
+          "button": "Przejdź"
+        },
+        "search-section": {
+          "header-text": "Tutaj znajdziesz swoją wymarzoną pracę",
+          "searching-bar": {
+            "form": {
+              "search-inputs1": {
+                "options": "opcja1",
+                "custom-list1": [
+                  "Asystent sklepu",
+                  "Kasjer",
+                  "Kurier",
+                  "Maszynista",
+                  "Pracownik sklepu"
+                ]
+              },
+              "search-inputs2": {
+                "options": "opcja2",
+                "custom-list2": [
+                  "Biedronka",
+                  "Inpost",
+                  "Lidl",
+                  "PKP Cargo",
+                  "McDonald's"
+                ]
+              },
+              "search-inputs3": {
+                "options": "opcja3",
+                "custom-list3": [
+                  "Warszawa",
+                  "Kraków",
+                  "Gdynia",
+                  "Kielce",
+                  "Lublin"
+                ]
+              }
+            }
+          },
+          "offers-buttons": {
+            "search-button": "Szukaj",
+            "clear-button": "Wyczyść"
+          }
+        },
+        "offers-zone-wrapper": {
+          "title": "Strefa ofert",
+          "load-more-button": "Załaduj więcej"
+        },
+        "offers-section": {
+          "header-text": "Oferty dnia",
+          "daily-offers-wrapper": {
+            "daily-offers": [
+              {
+                "day-offer-list": [
+                  "Manager",
+                  "Umowa o pracę",
+                  "Lidl",
+                  "Łódź, Zduńska Wola, Sieradz"
+                ],
+                "apply-button": "Aplikuj"
+              }
+            ]
+          }
+        },
+        "median-earnings": {
+          "title": "Mediana zarobków",
+          "median-box": [
+            {
+              "job-title": "Pracownik sklepu",
+              "salary": "2800 PLN"
+            },
+            {
+              "job-title": "Maszynista",
+              "salary": "4500 PLN"
+            },
+            {
+              "job-title": "Kasjer",
+              "salary": "2600 PLN"
+            },
+            {
+              "job-title": "Asystent sklepu",
+              "salary": "2700 PLN"
+            },
+            {
+              "median-result": {
+                "job-title": "Mediana",
+                "salary": "2750 PLN"
+              }
+            }
+          ]
+        },
+        "partners-section": {
+          "header-text": "Nasi partnerzy",
+          "partners-cards-section": [
+            {
+              "partner-card": "Amazon"
+            },
+            {
+              "partner-card": "Biedronka"
+            },
+            {
+              "partner-card": "McDonald"
+            },
+            {
+              "partner-card": "Lidl"
+            },
+            {
+              "partner-card": "InPost"
+            },
+            {
+              "partner-card": "PKP Cargo"
+            }
+          ]
+        },
+        "reviews-section": {
+          "header-text": "Opinie użytkowników",
+          "review-cards-section": [
+            {
+              "reviews-column": [
+                {
+                  "review-card": {
+                    "reviewer-name": "Janusz",
+                    "review": "Byłem sceptyczny wobec odkurzaczy po wprowadzeniu europejskich norm mocy. W przypadku Electroluxa było to całkowicie niepotrzebne. Moc ssania dostosowuje się do powierzchni, na której aktualnie pracuje. Potrzebowałem odkurzacza dla alergika, więc nie było dużego wyboru. Odkurzacz jest super cichy, można rozmawiać podczas jego pracy. Przy minimalnej mocy ssania jest prawie bezgłośny. Szkoda, że producent nie dołączył schowka na akcesoria."
+                  }
+                },
+                {
+                  "review-card": {
+                    "reviewer-name": "Krzysztof",
+                    "review": "#opiniazmotywowananagrodą Odkurzacz jest naprawdę cichy. Lekki i poręczny. Dodatkowo design jest naprawdę przyjemny dla oka. Działa zarówno na podłogach, jak i dywanach. Funkcja Smart jest naprawdę świetna. Zapobiegła wciągnięciu skarpetki :)"
+                  }
+                },
+                {
+                  "review-card": {
+                    "reviewer-name": "Konrad",
+                    "review": "Zakupiony odkurzacz zdecydowanie spełnia moje oczekiwania! Jest niezwykle wydajny, cichy i łatwy w obsłudze. Jego moc ssania sprawia, że sprzątanie jest szybkie i skuteczne, a różne akcesoria pozwalają dotrzeć do trudno dostępnych miejsc. Zdecydowanie polecam go każdemu, kto szuka solidnego i funkcjonalnego urządzenia do sprzątania. #opiniazmotywowananagrodą"
+                  }
+                },
+                {
+                  "review-card": {
+                    "reviewer-name": "Marek",
+                    "review": "Jestem zadowolony. Cicha praca robi wrażenie, a moc ssania jest wystarczająca. Krótko mówiąc: jest idealny! Jeśli wytrzyma tak długo, jak poprzedni Electrolux (15 lat), czy mogę oczekiwać więcej?"
+                  }
+                },
+                {
+                  "review-card": {
+                    "reviewer-name": "Anna",
+                    "review": "Po raz kolejny jesteśmy mile zaskoczeni odkurzaczem Electrolux, jest super cichy, funkcja Smart jest niezwykle przydatna przy przełączaniu między panelami a dywanem, sterowanie w uchwycie to fajny pomysł, jest bezprzewodowy, dużo lżejszy od poprzedniego modelu. Jedynym minusem jest mała szczotka przymocowana do uchwytu, niezbyt wygodna, ale poza tym jest świetny."
+                  }
+                },
+                {
+                  "review-card": {
+                    "reviewer-name": "Szymon",
+                    "review": "Gorąco polecam zakup w 100%. Obecna wersja jest jeszcze cichsza, lżejsza i dużo przyjaźniejsza dla domowników dzięki cichszej pracy. Mam również starszą wersję z silnikiem 650W i 58db, ale... starszy model, choć mocniejszy, był głośniejszy i miał słabsze ssanie, a do tego koła były mieszanką plastiku i gumy, więc trudniej było go przesuwać i robił więcej hałasu. Kolejnym plusem w nowej wersji jest zdecydowanie bogatszy zestaw startowy. #opiniazmotywowananagrodą"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Login & signUp page",
+    "data": [
+      {
+        "name": "Login",
+        "content": {
+          "main": {
+            "title": "Zaloguj się",
+            "form": {
+              "email": {
+                "placeholder": "Twój email"
+              },
+              "password": {
+                "placeholder": "Twoje hasło"
+              },
+              "login-button": "Zaloguj się",
+              "agree": "Przeczytałem i akceptuję regulamin strony",
+              "continue-with-google": "Kontynuuj z Google",
+              "continue-with-facebook": "Kontynuuj z Facebook"
+            }
+          }
+        }
+      },
+      {
+        "name": "SignUp",
+        "content": {
+          "main": {
+            "create-account1": {
+              "title": "Zarejestruj się",
+              "form": {
+                "email": {
+                  "placeholder": "Twój email"
+                },
+                "continue-button": "Kontynuuj",
+                "continue-with-google": "Kontynuuj z Google",
+                "continue-with-facebook": "Kontynuuj z Facebook"
+              }
+            },
+            "create-account2": {
+              "title": "Utwórz hasło",
+              "form": {
+                "password": {
+                  "placeholder": "Twoje nowe hasło"
+                },
+                "create-account-button": "Utwórz konto",
+                "agree": "Przeczytałem i akceptuję regulamin strony"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Page 404",
+    "content": {
+      "main": {
+        "page-not-found-section": {
+          "oops-text": "Ups!",
+          "not-found-text": [
+            "404 - Strona nie znaleziona",
+            "Wygląda na to, że się zgubiłeś. Wróć na stronę główną."
+          ],
+          "back-to-homepage-link": "Przejdź do strony głównej"
+        }
+      }
+    }
+  },
+  {
+    "name": "Partners",
+    "content": {
+      "main": {
+        "header-text": "Nasi partnerzy",
+        "cards-section": [
+          {
+            "company-name": "InPost",
+            "description": "InPost jest liderem w branży logistycznej, znanym z popularnych Paczkomatów i innowacyjnych rozwiązań kurierskich. Firma dynamicznie się rozwija, oferując stabilne zatrudnienie i możliwość pracy w innowacyjnym środowisku. Pracownicy InPost mogą liczyć na atrakcyjne wynagrodzenia, pakiet benefitów i możliwości awansu. Firma poszukuje zarówno kurierów, jak i specjalistów z zakresu logistyki, IT i obsługi klienta. InPost ceni zaangażowanie, nowoczesne podejście do technologii i pracę zespołową."
+          },
+          {
+            "company-name": "Biedronka",
+            "description": "Biedronka to największa sieć sklepów spożywczych w Polsce, należąca do grupy Jerónimo Martins. Firma oferuje stabilne zatrudnienie, atrakcyjne wynagrodzenia i pakiet benefitów, w tym prywatną opiekę medyczną i bony wakacyjne. Praca w Biedronce daje możliwości rozwoju w dynamicznym środowisku, liczne szkolenia i jasną ścieżkę kariery. Sieć poszukuje pracowników na stanowiska kasjerów, magazynierów i kierowników, oferując elastyczne grafiki i przyjazną atmosferę."
+          },
+          {
+            "company-name": "PKP Cargo",
+            "description": "PKP Cargo to największy operator kolejowych przewozów towarowych w Polsce i jeden z liderów w Europie. Firma oferuje stabilne zatrudnienie, konkurencyjne wynagrodzenia i pakiet benefitów, w tym ubezpieczenie na życie i świadczenia socjalne. Praca w PKP Cargo daje możliwości rozwoju w branży transportowej i logistycznej, zarówno na stanowiskach operacyjnych, jak i biurowych. Firma stawia na nowoczesne technologie, bezpieczeństwo i rozwój zawodowy swoich pracowników."
+          },
+          {
+            "company-name": "Lidl",
+            "description": "Lidl to międzynarodowa sieć supermarketów znana z wysokiej jakości produktów i konkurencyjnych cen. Firma oferuje atrakcyjne wynagrodzenia, stabilne zatrudnienie i pakiet benefitów, w tym prywatną opiekę medyczną i ubezpieczenie na życie. Lidl stawia na rozwój pracowników, oferując liczne szkolenia i możliwości awansu. Praca w Lidlu to dynamiczne środowisko, elastyczne grafiki i dobre warunki pracy dla kasjerów, kierowników sklepów i pracowników centrów logistycznych."
+          },
+          {
+            "company-name": "Amazon",
+            "description": "Amazon to globalny lider w e-commerce i technologii, oferujący szeroką gamę produktów i usług, takich jak Amazon Web Services (AWS) i Amazon Prime. Firma zatrudnia tysiące pracowników na różnych stanowiskach, od pracowników magazynowych po specjalistów IT. Praca w Amazon daje dostęp do nowoczesnych technologii, dynamicznego środowiska i atrakcyjnych benefitów, w tym prywatnej opieki medycznej i programów szkoleniowych. Amazon ceni innowacyjność, efektywność i dbałość o klienta, oferując stabilne zatrudnienie w nowoczesnych centrach logistycznych."
+          },
+          {
+            "company-name": "McDonald’s",
+            "description": "McDonald’s to jedna z największych sieci restauracji fast-food na świecie, znana z popularnych burgerów, frytek i napojów. Firma oferuje elastyczne grafiki, stabilne zatrudnienie i liczne możliwości rozwoju zawodowego, zarówno dla pracowników restauracji, jak i kadry zarządzającej. McDonald’s stawia na pracę zespołową, szkolenia i jasną ścieżkę awansu. To świetne miejsce dla osób szukających pierwszej pracy oraz tych, którzy chcą budować karierę w branży gastronomicznej."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "Common",
+    "content": {
+      "header": {
+        "wide-section": {
+          "nav": {
+            "nav-horizontal-list": [
+              "Strona główna",
+              "Partnerzy",
+              "O nas",
+              "Oferty pracy",
+              "Kreator CV",
+              "Opinie"
+            ]
+          }
+        },
+        "narrow-section-login": {
+          "login-button": "Zaloguj się",
+          "register-button": "Zarejestruj się"
+        },
+        "navbar-button": {
+          "menu-bar-icon": "ikona menu"
+        },
+        "navbar": {
+          "nav-list": [
+            "Strona główna",
+            "Partnerzy",
+            "O nas",
+            "Oferty pracy",
+            "Kreator CV",
+            "Opinie"
+          ]
+        }
+      },
+      "footer": {
+        "bottom-section": {
+          "nav-horizontal-list": [
+            "Godziny dostępności",
+            "Prywatność",
+            "Warunki",
+            "Twórcy",
+            "Opinie"
+          ]
+        }
+      }
+    }
+  }
+]

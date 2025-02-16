@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,6 +18,7 @@
     />
     <script src="../common_js.js" defer></script>
     <script src="signup.js" defer></script>
+    <script src="../Page Content/content.js" defer></script>
     <title>Signup page</title>
   </head>
 
@@ -42,7 +43,7 @@
                 alt="PLflag"
                 loading="lazy"
               />
-              Polski
+              <span>Polish</span>
             </div>
             <div>
               <img
@@ -50,7 +51,7 @@
                 alt="ENflag"
                 loading="lazy"
               />
-              English
+              <span>English</span>
             </div>
           </div>
         </div>
@@ -59,21 +60,21 @@
       <section class="wide-section">
         <nav>
           <ul class="nav-horizontal-list">
-            <li><a href="../Home Page/index.html" target="_blank">Home</a></li>
+            <li><a href="../Home Page/index.html" target="_blank"></a></li>
             <li>
-              <a href="../Partners/partners.html" target="_blank">Partnerzy</a>
+              <a href="../Partners/partners.html" target="_blank"></a>
             </li>
             <li>
-              <a href="../About/index.html" target="_blank">O nas</a>
+              <a href="../About/index.html" target="_blank"></a>
             </li>
             <li>
-              <a href="../Home Page/index.html#search-input">Oferty pracy</a>
+              <a href="../Home Page/index.html#search-input"></a>
             </li>
             <li>
-              <a href="../Creator/index.html" target="_blank">Kreator CV</a>
+              <a href="../Creator/index.html" target="_blank"></a>
             </li>
             <li>
-              <a href="../Home Page/index.html#reviews-section">Opinie</a>
+              <a href="../Home Page/index.html#reviews-section"></a>
             </li>
           </ul>
         </nav>
@@ -81,17 +82,15 @@
 
       <section class="narrow-section">
         <a
-          href="../Login & signup Page/form.html"
+          href="../Login & signup Page/login.html"
           target="_blank"
           class="login-button button-inside-style"
-          >Zaloguj</a
-        >
+        ></a>
         <a
           href="../Login & signup Page/signup.html"
           target="_blank"
           class="register-button button-inside-style"
-          >Zarejestruj</a
-        >
+        ></a>
       </section>
 
       <button class="navbar-button">
@@ -105,7 +104,7 @@
       <nav class="navbar">
         <ul>
           <li>
-            <a href="../Home Page/index.html" target="_blank">Home</a>
+            <a href="../Home Page/index.html" target="_blank"></a>
             <img
               src="../Common images/arrow-right.png"
               alt="arrow right"
@@ -113,7 +112,7 @@
             />
           </li>
           <li>
-            <a href="../Partners/partners.html" target="_blank">Partnerzy</a>
+            <a href="../Partners/partners.html" target="_blank"></a>
             <img
               src="../Common images/arrow-right.png"
               alt="arrow right"
@@ -121,7 +120,7 @@
             />
           </li>
           <li>
-            <a href="../About/index.html" target="_blank">O nas</a>
+            <a href="../About/index.html" target="_blank"></a>
             <img
               src="../Common images/arrow-right.png"
               alt="arrow right"
@@ -129,7 +128,7 @@
             />
           </li>
           <li>
-            <a href="../Home Page/index.html#search-input">Oferty pracy</a>
+            <a href="../Home Page/index.html#search-input"></a>
             <img
               src="../Common images/arrow-right.png"
               alt="arrow right"
@@ -137,7 +136,7 @@
             />
           </li>
           <li>
-            <a href="../Creator/index.html" target="_blank">Kreator CV</a>
+            <a href="../Creator/index.html" target="_blank"></a>
             <img
               src="../Common images/arrow-right.png"
               alt="arrow right"
@@ -145,7 +144,7 @@
             />
           </li>
           <li>
-            <a href="../Home Page/index.html#reviews-section">Opinie</a>
+            <a href="../Home Page/index.html#reviews-section"></a>
             <img
               src="../Common images/arrow-right.png"
               alt="arrow right"
@@ -158,38 +157,34 @@
     <div class="main-wrapper">
       <main class="create-account create-account1">
         <form action="" method="post">
-          <h1>Sign up</h1>
+          <h1></h1>
           <input
             type="email"
             name="email"
             id="email"
-            placeholder="Your email"
+            placeholder=""
             required
             autocomplete="on"
           />
-          <button id="continue-button">Dalej</button>
+          <button id="continue-button"></button>
           <hr />
-          <button class="continue-button continue-button1">
-            Continue with Google
-          </button>
-          <button class="continue-button continue-button2">
-            Continue with Facebook
-          </button>
+          <button class="continue-button continue-button1"></button>
+          <button class="continue-button continue-button2"></button>
         </form>
       </main>
 
       <main class="create-account create-account2">
         <form action="" method="post">
-          <h1>Create password</h1>
+          <h1></h1>
           <input
             type="password"
             name="password"
-            placeholder="Your new password"
+            placeholder=""
             required
             id="password"
             autocomplete="on"
           />
-          <button id="create-account-button">Create account</button>
+          <button id="create-account-button"></button>
           <hr />
           <label
             ><input
@@ -199,8 +194,9 @@
               value="agree"
               checked
               required
-            />I have read and accept the website regulations</label
-          >
+            />
+            <span class="agree-label"></span>
+          </label>
         </form>
       </main>
     </div>
@@ -243,18 +239,21 @@
       </section>
       <section class="bottom-section">
         <ul class="nav-horizontal-list">
-          <li><a href="" class="nav-option">Godziny dostępności</a></li>
-          <li><a href="" class="nav-option">Prywatność</a></li>
-          <li><a href="" class="nav-option">Warunki</a></li>
+          <li><a href="" class="nav-option"></a></li>
+          <li><a href="" class="nav-option"></a></li>
+          <li><a href="" class="nav-option"></a></li>
           <li>
-            <a href="../About/index.html" target="_blank" class="nav-option"
-              >Deweloperzy</a
-            >
+            <a
+              href="../About/index.html"
+              target="_blank"
+              class="nav-option"
+            ></a>
           </li>
           <li>
-            <a href="../Home Page/index.html#reviews-section" class="nav-option"
-              >Opinie</a
-            >
+            <a
+              href="../Home Page/index.html#reviews-section"
+              class="nav-option"
+            ></a>
           </li>
         </ul>
       </section>

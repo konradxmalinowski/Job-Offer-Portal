@@ -18,7 +18,7 @@ html {
 .welcome-section {
   width: 100%;
   height: auto;
-  min-height: calc(50svh - 40px);
+  min-height: calc(50svh - 100px);
   background-color: var(--clr-primary-400);
   display: flex;
   justify-content: center;
@@ -65,7 +65,7 @@ html {
   background-color: var(--clr-primary-200);
   width: 100%;
   height: auto;
-  min-height: 50svh;
+  min-height: calc(50svh + 40px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,8 +145,8 @@ form {
 .search-button {
   background-color: var(--clr-primary);
   height: 35px;
-  width: 130px;
-  padding: 23px;
+  width: 120px;
+  padding: 23px 10px;
   border-radius: 30px;
   color: var(--clr-font-2);
   display: flex;
@@ -155,7 +155,12 @@ form {
   text-decoration: none;
 
   &:hover {
-    width: 170px;
+    width: 180px;
+    transition: width 0.2s ease-in-out;
+  }
+
+  &:not(:hover) {
+    width: 120px;
     transition: width 0.2s ease-in-out;
   }
 }
@@ -242,7 +247,7 @@ form {
 }
 
 .offer::before {
-  content: 'Super offer';
+  content: attr(title);
   width: auto;
   padding: 6px 12px;
   font-size: 14px;
@@ -335,13 +340,13 @@ button {
   width: 100%;
   display: flex;
   justify-content: center;
-  column-gap: max(5vh, 40px);
   overflow-x: hidden;
   transition: all ease-in-out 0.5s 0s;
 }
 
 .daily-offers {
   display: flex;
+  column-gap: max(5vh, 40px);
 }
 
 .offers-section {

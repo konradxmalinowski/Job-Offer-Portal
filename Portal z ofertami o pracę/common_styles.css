@@ -61,6 +61,15 @@ html {
   font-weight: 700;
 }
 
+a {
+  text-decoration: none;
+  color: var(--clr-primary-font);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 body {
   width: 100%;
   min-height: 100svh;
@@ -151,6 +160,11 @@ header {
   margin: 0 10px 0 0;
 }
 
+.lang-list span:hover {
+  color: var(--clr-grey2) !important;
+  cursor: pointer;
+}
+
 .nav-horizontal-list {
   list-style: none;
   display: flex;
@@ -179,7 +193,7 @@ header {
 
 .login-button {
   background-color: var(--clr-font-2);
-  width: 85px;
+  width: fit-content;
   height: 50%;
   color: var(--clr-font);
   opacity: 90%;
@@ -188,7 +202,7 @@ header {
 .register-button {
   margin: 0 15px;
   background-color: var(--clr-font);
-  width: 105px;
+  width: fit-content;
   height: 50%;
   color: var(--clr-font-2);
   opacity: 90%;

@@ -1,13 +1,37 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 
+
+// daily offers
+const dailyOffersWrapper = document.querySelector('.daily-offers-wrapper');
+
+dailyOffersWrapper.addEventListener('wheel', (event) => {
+    event.preventDefault();
+
+    if (event.deltaY > 0) {
+        dailyOffersWrapper.scrollLeft += 100;
+    } else {
+        dailyOffersWrapper.scrollLeft -= 100;
+    }
+});
+
+
+
 let dailySectionHTML = document.createElement('section');
-const dailyOfferObject = [
+const dailyOfferObjectEN = [
     {
-        name: 'Leader',
+        name: 'Manager',
         place: 'Warszawa, Kraków',
         salary: '4000 - 5000PLN',
         daysOfWork: 'Monday - Fridays, work shifts'
+    }
+];
+const dailyOfferObjectPL = [
+    {
+        name: 'Manager',
+        place: 'Warszawa, Kraków',
+        salary: '4000 - 5000PLN',
+        daysOfWork: 'Poniedziałek - Piątek, zmiany'
     }
 ];
 const dailyApplyButtons = document.querySelectorAll('.day-offer-card > div > button');
@@ -18,7 +42,7 @@ function createDailyApplySection() {
         dailySectionHTML.style.display = 'flex';
     else {
         dailySectionHTML.classList.add('apply-section');
-        dailySectionHTML.innerHTML = returnApplyHTML(dailyOfferObject);
+        dailySectionHTML.innerHTML = browserDefaultLanguage.includes('pl') ? returnApplyHTML(dailyOfferObjectPL) : returnApplyHTML(dailyOfferObjectEN);
         document.body.appendChild(dailySectionHTML);
     }
 
