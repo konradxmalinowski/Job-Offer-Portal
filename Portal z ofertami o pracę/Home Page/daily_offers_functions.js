@@ -26,7 +26,7 @@ dailyOffersWrapper.addEventListener('touchmove', (event) => {
   if (!isDown) return;
   event.preventDefault();
   const x = event.touches[0].pageX - dailyOffersWrapper.offsetLeft;
-  const walk = (x - startX) * 1.3;
+  const walk = (x - startX) * 1.5;
   dailyOffersWrapper.scrollLeft = scrollLeft - walk;
 });
 
