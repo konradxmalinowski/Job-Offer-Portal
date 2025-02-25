@@ -114,7 +114,7 @@ Check yourself and join the community today! :smile:
 
 ### Query 8
 
-> Napisz mi kod, dzięki któremu będzie mozliwe przewijanie daily ofert na telefonie
+> Popraw kod przewijania daily ofert na telefonie
 
 ---
 
