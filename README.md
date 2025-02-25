@@ -1,9 +1,8 @@
-The [](projekt-wit-portal.ct8.pl) is a modern internet platform created for people who are looking for a job. The site offers CV Generator and latest job offers.
-Thanks to the intuitive interface and modern web technologies, [our website](projekt-wit-Portal.ct8.pl) provides convenience and efficiency in everyday use.
+The [projekt-wit-portal.ct8.pl](projekt-wit-portal.ct8.pl) is a modern internet platform created for people who are looking for a job. The site offers CV Generator and latest job offers.
+Thanks to the intuitive interface and modern web technologies such as HTML5, CSS3, JavaScript [our website](projekt-wit-Portal.ct8.pl) provides convenience and efficiency in everyday use.
+We also used Local Storage, asynchronous code and features from ES6
 
 Check yourself and join the community today! :smile:
-
----
 
 ### Contact
 
