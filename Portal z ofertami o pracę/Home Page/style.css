@@ -1,15 +1,3 @@
-:root {
-  --clr-primary: #003d2b;
-  --clr-primary-400: #222529;
-  --clr-primary-300: #343842;
-  --clr-primary-200: #272a2e;
-  --clr-grey: #4c585b;
-  --clr-grey2: rgb(167, 167, 167);
-  --clr-font: black;
-  --clr-font-2: whitesmoke;
-  --clr-primary-font: #fff;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -647,33 +635,14 @@ button {
   margin-bottom: 10px;
 }
 
-.sign {
-  font-size: 25px;
-  cursor: pointer;
-  rotate: 0deg;
-  transition: rotate 0.3s ease-in-out 0s;
-}
-
 .faq {
   width: 100%;
   margin-bottom: 40px;
 }
 
 .faq-answer {
-  height: 0;
   overflow: hidden;
   color: var(--clr-grey2);
-  transition: all 0.5s ease-in-out 0s;
-}
-
-.rotated {
-  rotate: 45deg;
-  transition: rotate 0.3s ease-in-out 0s;
-}
-
-.shown {
-  height: 140px;
-  transition: all 0.5s ease-in-out 0s;
 }
 
 /* apply section */

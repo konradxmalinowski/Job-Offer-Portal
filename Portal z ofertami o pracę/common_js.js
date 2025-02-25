@@ -1,8 +1,4 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
-
-
-let browserDefaultLanguage = navigator.language;
+let browserDefaultLanguage = localStorage.getItem('lang') ?? navigator.language;
 
 // menu
 const navbarMenu = document.querySelectorAll('.navbar');
@@ -83,7 +79,7 @@ navbarButtons.forEach((navbarButton) => {
 langlist.forEach((lang, idx) => {
   lang.onclick = () => {
     changeLanguage(idx);
-  }
+  };
 });
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
