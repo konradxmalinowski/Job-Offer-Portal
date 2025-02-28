@@ -22,24 +22,22 @@ function toggleClass() {
     let isClass = navbar.classList.contains('shown-navbar');
 
     if (isClass) {
-      setTimeout(() => {
+      return new Promise((resolve, reject) => {
         navbar.classList.add('hidden-navbar');
         navbar.classList.remove('shown-navbar');
-      }, 0);
-
-      setTimeout(() => {
-        navbar.style.display = 'none';
-      }, 750);
-    } else {
-      setTimeout(() => {
-        navbar.classList.add('shown-navbar');
-        navbar.classList.remove('hidden-navbar');
-      }, 0);
-
-      setTimeout(() => {
-        navbar.style.display = 'block';
-      }, 750);
+        resolve('success');
+      }).then(() => {
+        setTimeout(() => {
+          navbar.style.display = 'none';
+        }, 300);
+      });
     }
+
+    return new Promise((resolve, reject) => {
+      navbar.classList.add('shown-navbar');
+      navbar.classList.remove('hidden-navbar');
+      resolve('success');
+    }).then(() => (navbar.style.display = 'block'));
   });
 }
 
