@@ -325,18 +325,16 @@ button {
 
 /* daily offers */
 .daily-offers-wrapper {
-  width: fit-content;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   overflow-x: hidden;
-  transition: all ease-in-out 0.5s 0s;
+  padding-left: 30px;
 }
 
 .daily-offers {
   display: flex;
   column-gap: max(5vh, 40px);
-  padding: 0 200px;
-  box-sizing: content-box;
 }
 
 .offers-section {
@@ -567,6 +565,12 @@ button {
   border-radius: 8px;
   font-size: 15px;
   word-wrap: break-word;
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 100%;
+    transition: opacity 0.2s ease-in-out;
+  }
 }
 
 .reviewer-name {
@@ -575,11 +579,6 @@ button {
   font-weight: 700;
   display: block;
   opacity: 90%;
-}
-
-.review-card:hover {
-  opacity: 100%;
-  transition: opacity 0.2s ease-in-out;
 }
 
 @media (width <=1200px) {
@@ -645,7 +644,6 @@ button {
 }
 
 .faq-answer {
-  overflow: hidden;
   color: var(--clr-grey2);
 }
 

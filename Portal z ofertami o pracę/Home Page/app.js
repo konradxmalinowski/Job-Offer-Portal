@@ -103,4 +103,12 @@ const goToTopButton = document.querySelector('#go-to-top');
 
 window.addEventListener('scroll', () => {
   goToTopButton.style.display = 'block';
+
+  if (window.scrollY === 0) {
+    goToTopButton.style.display = 'none';
+  }
+});
+
+goToTopButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0 });
 });
