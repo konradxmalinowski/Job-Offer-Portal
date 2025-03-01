@@ -13,14 +13,6 @@ class Developer {
 
 function createDevelopers() {
   let descriptions = [];
-
-  descriptions['Szymon'] = [
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur placeat fugit, voluptatem ratione illum quidem qui fuga magni nobis magnam1.',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur placeat fugit, voluptatem ratione illum quidem qui fuga magni nobis magnam2.',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur placeat fugit, voluptatem ratione illum quidem qui fuga magni nobis magnam3.',
-    '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4nOsnnEnpvHx49mkCx0Omu?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
-  ];
-
   if (browserDefaultLanguage.includes('pl')) {
     descriptions['Konrad'] = [
       'Jestem web developerem specjalizującym się w technologiach frontendowych i backendowych. Tworzę nowoczesne strony internetowe i aplikacje webowe.',
@@ -28,12 +20,26 @@ function createDevelopers() {
       'Moje umiejętności obejmują HTML, CSS, JavaScript, React, a także zarządzanie serwerami i bazami danych. Stale rozwijam swoje kompetencje.',
       '<iframe style="border-radius:12px;" src="https://open.spotify.com/embed/track/3dxiWIBVJRlqh9xk144rf4?utm_source=generator&theme=0" width="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
     ];
+
+    descriptions['Szymon'] = [
+      'Jestem początkującym web developerem, który uczy się technologii frontendowych i backendowych. Tworzę strony internetowe i aplikacje webowe, stale rozwijając swoje umiejętności.',
+      'Oprócz programowania interesuję się nowinkami technologicznymi. W wolnym czasie lubię pograć w starsze jak i nowsze gry komputerowe.',
+      'Moje umiejętności obejmują HTML, CSS, JavaScript, a także zarządzanie serwerami i bazami danych. Staram się stale rozwijać swoje umiejętności.',
+      '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4nOsnnEnpvHx49mkCx0Omu?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+    ];
   } else {
     descriptions['Konrad'] = [
       'I am a web developer specializing in front and backend technologies. I create modern websites and web applications.',
       'In addition to programming, I am interested in technological innovations and develop my portfolio. I also like photography and computer games.',
       'My skills include HTML, CSS, JavaScript, React, as well as servers and database management. I am constantly developing my competences.',
       '<iframe style="border-radius:12px;" src="https://open.spotify.com/embed/track/3dxiWIBVJRlqh9xk144rf4?utm_source=generator&theme=0" width="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+    ];
+
+    descriptions['Szymon'] = [
+      'I am a beginner web developer learning frontend and backend technologies. I create websites and web applications, constantly improving my skills.',
+      'Apart from programming, I am interested in technological innovations. In my free time, I enjoy playing both old and new computer games.',
+      'My skills include HTML, CSS, JavaScript, as well as server and database management. I strive to continuously develop my abilities.',
+      '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4nOsnnEnpvHx49mkCx0Omu?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
     ];
   }
 
