@@ -7,11 +7,11 @@
         "cards-section": [
           {
             "name": "Konrad Malinowski",
-            "job-name": "Inżynier Fullstack"
+            "job-name": "Fullstack developer"
           },
           {
             "name": "Szymon Kubiak",
-            "job-name": "Inżynier Frontend"
+            "job-name": "Frontend developer"
           }
         ],
         "services-wrapper": {

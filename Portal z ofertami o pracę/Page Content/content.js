@@ -452,6 +452,8 @@ function changeLanguage(idx) {
     changeFlag();
     changeHTMLAttribute();
     addToLocalStorage('pl');
+
+    [Konrad, Szymon] = createDevelopers();
   }
   if (idx === 1) {
     if (browserDefaultLanguage.includes('en')) {
@@ -463,6 +465,8 @@ function changeLanguage(idx) {
     changeFlag();
     changeHTMLAttribute();
     addToLocalStorage('en');
+
+    let [Konrad, Szymon] = createDevelopers();
   }
 }
 

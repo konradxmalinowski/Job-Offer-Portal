@@ -97,3 +97,10 @@ fillInputIfChosen();
 handleLoadMoreOffersClick();
 clearInputsButton.onclick = clearInputs;
 findOffersButton.onclick = findMatchingOffers;
+
+// go to top button
+const goToTopButton = document.querySelector('#go-to-top');
+
+window.addEventListener('scroll', () => {
+  goToTopButton.style.display = 'block';
+});

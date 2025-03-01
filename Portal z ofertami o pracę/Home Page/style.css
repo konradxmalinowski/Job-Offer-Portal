@@ -325,7 +325,7 @@ button {
 
 /* daily offers */
 .daily-offers-wrapper {
-  width: 100%;
+  width: fit-content;
   display: flex;
   justify-content: center;
   overflow-x: hidden;
@@ -335,6 +335,8 @@ button {
 .daily-offers {
   display: flex;
   column-gap: max(5vh, 40px);
+  padding: 0 200px;
+  box-sizing: content-box;
 }
 
 .offers-section {
@@ -645,6 +647,28 @@ button {
 .faq-answer {
   overflow: hidden;
   color: var(--clr-grey2);
+}
+
+/* go to top arrow */
+#go-to-top {
+  width: 45px;
+  height: 45px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  display: none;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+#go-to-top img {
+  width: 100%;
+  height: 100%;
+  transform: rotate(90deg);
 }
 
 /* apply section */
