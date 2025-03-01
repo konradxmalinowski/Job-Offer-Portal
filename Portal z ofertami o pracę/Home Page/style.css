@@ -651,7 +651,7 @@ button {
 #go-to-top {
   width: 45px;
   height: 45px;
-  background-color: black;
+  background-color: var(--clr-font);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -661,12 +661,16 @@ button {
   display: none;
   border-radius: 50%;
   padding: 4px;
+  opacity: 55%;
+
+  &:hover{
+    opacity: 65%;
+  }
 }
 
 #go-to-top img {
   width: 100%;
   height: 100%;
-  transform: rotate(90deg);
 }
 
 /* apply section */
