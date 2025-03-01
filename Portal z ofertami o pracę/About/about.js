@@ -25,7 +25,7 @@ function createDevelopers() {
     descriptions['Konrad'] = [
       'Jestem web developerem specjalizującym się w technologiach frontendowych i backendowych. Tworzę nowoczesne strony internetowe i aplikacje webowe.',
       'Oprócz programowania interesuję się innowacjami technologicznymi i rozwijam swoje portfolio. Lubię także fotografię i gry komputerowe.',
-      'Moje umiejętności obejmują HTML, CSS, JavaScript, React, a także zarządzanie serwerami i bazami danych. Stale rozwijam swoje kompetencje.,',
+      'Moje umiejętności obejmują HTML, CSS, JavaScript, React, a także zarządzanie serwerami i bazami danych. Stale rozwijam swoje kompetencje.',
       '<iframe style="border-radius:12px;" src="https://open.spotify.com/embed/track/3dxiWIBVJRlqh9xk144rf4?utm_source=generator&theme=0" width="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
     ];
   } else {
