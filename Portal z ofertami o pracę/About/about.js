@@ -18,7 +18,7 @@ function createDevelopers() {
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur placeat fugit, voluptatem ratione illum quidem qui fuga magni nobis magnam1.',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur placeat fugit, voluptatem ratione illum quidem qui fuga magni nobis magnam2.',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur placeat fugit, voluptatem ratione illum quidem qui fuga magni nobis magnam3.',
-    '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3dxiWIBVJRlqh9xk144rf4?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+    '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4nOsnnEnpvHx49mkCx0Omu?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
   ];
 
   if (browserDefaultLanguage.includes('pl')) {
