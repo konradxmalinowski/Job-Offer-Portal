@@ -36,6 +36,7 @@ Check yourself and join the community today! :smile:
 - [Query 9](#query-9)
 - [Query 10](#query-10)
 - [Query 11](#query-11)
+- [Query 12](#query-12)
 
 ---
 
@@ -134,3 +135,7 @@ Check yourself and join the community today! :smile:
 ### Query 11
 
 > Zoptymalizuj działanie funkcji (usuń niepotrzebne stałe/zmienne): fillAboutPage, fillCreatorPage, fillHomePage, fillLoginPage, itd..
+
+### Query 12
+
+> Wygeneruj politykę prywatności i regulamin korzystania ze strony: projekt-wit-portal.ct8.pl.
