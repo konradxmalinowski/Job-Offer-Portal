@@ -12,6 +12,8 @@
   --clr-primary-font: #fff;
 }
 
+/* Styles for common elements */
+
 html {
   scroll-behavior: smooth;
 }
@@ -25,14 +27,29 @@ html {
   font-style: normal;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--clr-primary-400);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-grey);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--clr-grey2);
+}
+
 body {
   width: 100%;
   min-height: 100svh;
   background-color: var(--clr-primary-400);
   color: var(--clr-font-2);
 }
-
-/* classes for all elements  */
 
 .green {
   color: var(--clr-primary-100);
@@ -195,6 +212,7 @@ header {
   color: var(--clr-font-2);
 }
 
+/* login and signup buttons */
 .login-button {
   background-color: var(--clr-font-2);
   width: fit-content;
@@ -225,6 +243,7 @@ header {
   opacity: 100%;
 }
 
+/* login and signup buttons for smaller devices*/
 @media (width <= 400px) {
   .register-button {
     margin: 0 8px;
@@ -234,6 +253,8 @@ header {
     padding: 16px 5px;
   }
 }
+
+/* burger menu */
 
 .navbar-button {
   background-color: transparent;
@@ -260,7 +281,6 @@ header {
   animation: hideNavbar 0.5s ease-in-out 0s 1 normal forwards;
 }
 
-/* burger menu */
 .navbar {
   width: 97%;
   height: 250px;
@@ -306,7 +326,7 @@ header {
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  padding-left: 35%;
+  padding-left: 45%;
   position: relative;
 }
 
@@ -319,18 +339,6 @@ header {
   transform: translateY(-50%);
   z-index: 3;
 }
-
-@media (width <= 500px) {
-  .navbar li img {
-    right: 30px;
-  }
-}
-
-.navbar li:hover > img {
-  opacity: 0.8;
-  transition: opacity 0.3s ease-in-out 0s;
-}
-
 .navbar li:hover > a {
   color: var(--clr-primary-font);
   margin-left: 30px;
@@ -338,8 +346,7 @@ header {
   transition: margin-left 0.7s ease-in-out 0s;
 }
 
-/* main */
-
+/* main  */
 .main-wrapper {
   width: 100%;
   min-height: calc(100svh - 70px);
@@ -348,6 +355,7 @@ header {
   align-items: center;
 }
 
+/* footer elements */
 footer {
   background-color: var(--clr-primary-200);
   width: 100%;
@@ -380,6 +388,13 @@ footer {
   position: relative;
   top: 2px;
   width: 30px;
+}
+
+/* burger menu for smaller devices */
+@media (width <= 500px) {
+  .navbar li img {
+    right: 30px;
+  }
 }
 
 @media (width <=990px) {

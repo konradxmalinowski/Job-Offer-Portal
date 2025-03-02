@@ -6,6 +6,12 @@ main {
   border-radius: 10px;
 }
 
+.create-account {
+  width: 400px;
+  background-color: var(--clr-primary-200);
+  border-radius: 10px;
+}
+
 .create-account1 {
   height: 380px;
   opacity: 1;

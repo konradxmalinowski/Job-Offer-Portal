@@ -6,7 +6,7 @@ main {
   padding: 20px 0;
 }
 
-.form-wrapper {
+.form {
   width: 100%;
   height: calc(100% - 89px);
   display: flex;
@@ -76,7 +76,7 @@ main h1 {
   content: url('images/pfp.png');
 }
 
-/* colors */
+/* color icons */
 .colors {
   width: 80%;
   margin: 10px auto;
@@ -126,6 +126,12 @@ main h1 {
   background-color: var(--color-5);
 }
 
+.submit-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 button {
   padding: 13px;
   width: 150px;
@@ -162,6 +168,10 @@ input {
   }
 }
 
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
 textarea {
   resize: vertical;
   overflow-y: auto;
@@ -180,6 +190,7 @@ textarea {
   }
 }
 
+/* cv creator for phones */
 @media (width <=900px) {
   body {
     margin: 30px 0;
@@ -188,7 +199,7 @@ textarea {
   main {
     height: 900px;
     width: min(400px, 90%);
-    padding-top: 5px;
+    padding-top: 30px;
   }
 
   main h1 {
@@ -202,7 +213,7 @@ textarea {
     row-gap: 30px;
   }
 
-  .form-wrapper {
+  .form {
     flex-direction: column;
   }
 }

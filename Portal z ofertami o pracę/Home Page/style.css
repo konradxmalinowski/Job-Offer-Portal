@@ -264,7 +264,7 @@ form {
   margin: 0;
 }
 
-/* offer for phone */
+/* offer for smaller device */
 
 @media (width<=400px) {
   .offer {
@@ -324,6 +324,7 @@ button {
 }
 
 /* daily offers */
+
 .daily-offers-wrapper {
   width: 100%;
   display: flex;
@@ -405,7 +406,7 @@ button {
   }
 }
 
-/* medians of earnings */
+/* median of earnings */
 
 .median-earnings {
   width: max(50%, 300px);
@@ -452,6 +453,7 @@ button {
   font-weight: 500;
 }
 
+/* median for smaller devices */
 @media (width <=1000px) {
   .median-box p {
     flex-direction: column;
@@ -581,6 +583,7 @@ button {
   opacity: 90%;
 }
 
+/* reviews for smaller devices */
 @media (width <=1200px) {
   .partners-cards-section {
     grid-template-columns: repeat(2, 1fr);
@@ -648,6 +651,7 @@ button {
 }
 
 /* go to top arrow */
+
 #go-to-top {
   width: 45px;
   height: 45px;
@@ -663,7 +667,7 @@ button {
   padding: 4px;
   opacity: 55%;
 
-  &:hover{
+  &:hover {
     opacity: 65%;
   }
 }
@@ -834,6 +838,7 @@ input[type='file']::file-selector-button:hover {
   }
 }
 
+/* apply section for smaller devices */
 @media (width <= 740px) {
   .apply-section {
     width: 90vw;
