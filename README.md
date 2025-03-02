@@ -136,6 +136,8 @@ Check yourself and join the community today! :smile:
 
 > Zoptymalizuj działanie funkcji (usuń niepotrzebne stałe/zmienne): fillAboutPage, fillCreatorPage, fillHomePage, fillLoginPage, itd..
 
+---
+
 ### Query 12
 
 > Wygeneruj politykę prywatności i regulamin korzystania ze strony: projekt-wit-portal.ct8.pl.
