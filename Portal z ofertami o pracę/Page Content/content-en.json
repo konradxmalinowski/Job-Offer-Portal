@@ -407,13 +407,7 @@
       },
       "footer": {
         "bottom-section": {
-          "nav-horizontal-list": [
-            "Availability Hours",
-            "Privacy",
-            "Terms",
-            "Developers",
-            "Reviews"
-          ]
+          "nav-horizontal-list": ["Privacy", "Terms", "Developers", "Reviews"]
         }
       }
     }

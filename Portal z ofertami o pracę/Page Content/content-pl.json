@@ -411,13 +411,7 @@
       },
       "footer": {
         "bottom-section": {
-          "nav-horizontal-list": [
-            "Godziny dostępności",
-            "Prywatność",
-            "Warunki",
-            "Twórcy",
-            "Opinie"
-          ]
+          "nav-horizontal-list": ["Prywatność", "Warunki", "Twórcy", "Opinie"]
         }
       }
     }
