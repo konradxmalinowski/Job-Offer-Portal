@@ -1,143 +1,87 @@
-The [projekt-wit-portal.ct8.pl](projekt-wit-portal.ct8.pl) is a modern internet platform created for people who are looking for a job. The site offers CV Generator and latest job offers.
-Thanks to the intuitive interface and modern web technologies such as HTML5, CSS3, JavaScript [our website](projekt-wit-Portal.ct8.pl) provides convenience and efficiency in everyday use.
-We also used Local Storage, asynchronous code and features from ES6
-
-Check yourself and join the community today! :smile:
-
-### Contact
-
-- **Email**
-  - _konradmalinowski@zsezdw.onmicrosoft.com_
-  - _szymonkubiak@zsezdw.onmicrosoft.com_
-- **Instagram**:
-  - [Author1](https://www.instagram.com/konradxmalinowski)
-  - [Author2](https://www.instagram.com/szymonito_121/)
-- **Facebook**
-  - [Author1](https://www.facebook.com/konradxmalinowski)
-  - [Author2](https://www.facebook.com/Szymon.Kubiakk.1)
-- **Github**
-  - [Author1](https://github.com/konradxmalinowski/)
-  - [Author2](https://github.com/Ebot100/)
+<h1 align="center">💼 Job Offer Portal</h1>
+<p align="center">
+  <a href="https://projekt-wit-portal.ct8.pl" target="_blank">
+    <img src="https://img.shields.io/badge/Live%20Demo-Available-brightgreen?style=for-the-badge" alt="Live Demo">
+  </a>
+  <a href="https://github.com/konradxmalinowski/Portal-z-ofertami-o-prace" target="_blank">
+    <img src="https://img.shields.io/github/stars/konradxmalinowski/Portal-z-ofertami-o-prace?style=for-the-badge" alt="GitHub Stars">
+  </a>
+</p>
 
 ---
 
-### Queries used to build this project
+## 📌 Overview
 
-**_Contents_**:
-
-- [Query 1](#query-1)
-- [Query 2](#query-2)
-- [Query 3](#query-3)
-- [Query 4](#query-4)
-- [Query 5](#query-5)
-- [Query 6](#query-6)
-- [Query 7](#query-7)
-- [Query 8](#query-8)
-- [Query 9](#query-9)
-- [Query 10](#query-10)
-- [Query 11](#query-11)
-- [Query 12](#query-12)
+**Job Offer Portal** is a modern web application designed to streamline the job search process. It offers users the ability to browse the latest job listings and generate professional CVs effortlessly. The platform emphasizes user experience with an intuitive interface and responsive design.
 
 ---
 
-### Query 1
+## 🚀 Features
 
-> Stwórz mi taką listę dla pracowników firm: Biedronka, LIdl, inpost, pkp cargo, McDonald's:
-
-```json
-[
-  {
-    "id": 1,
-    "companyName": "Biedronka",
-    "Requirements": "",
-    "employmentType": "",
-    "place": "(remote, stationary -> Warszawa, Kraków, etc)",
-    "salary": "",
-    "daysOfWork": "pn-pt",
-    "benefits": "sports classes, retirement program",
-    "otherInformation": ""
-  }
-  ...
-]
-```
+- **Dynamic Job Listings**: Stay updated with the latest job opportunities.
+- **CV Generator**: Create and download a professional CV in minutes.
+- **Responsive Design**: Optimized for desktops, tablets, and mobile devices.
+- **Local Storage Integration**: Retain user data for a seamless experience.
+- **Asynchronous Operations**: Smooth and efficient data handling.
+- **Modern JavaScript (ES6+)**: Leveraging the latest JavaScript features for enhanced functionality.
 
 ---
 
-### Query 2
+## 🛠️ Technologies Used
 
-> Teraz przetłumacz tylko treść na język angielski.
-
-```json
-[
-  {
-    "id": 1,
-    "companyName": "Biedronka",
-    "Requirements": "Chęć do pracy, dyspozycyjność, umiejętność pracy w zespole",
-    "employmentType": "Umowa o pracę / Umowa zlecenie",
-    "place": "Stacjonarnie -> Warszawa, Kraków, Poznań, inne miasta",
-    "salary": "4500-5500 PLN brutto",
-    "daysOfWork": "pn-pt, możliwe soboty",
-    "benefits": "Dofinansowanie do karty sportowej, pakiet medyczny, bony świąteczne",
-    "otherInformation": "Możliwość awansu, szkolenia wprowadzające"
-  },
-  ...
-]
-```
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Design Tools**: Figma
+- **Version Control**: Git & GitHub
+- **Additional Tools**: Local Storage API, Fetch API
 
 ---
 
-### Query 3
+## 📸 Screenshots
 
-> Wygeneruj ikonę do strony: [link](projekt-wit-portal.ct8.pl). Ma być bez tła, ciemna i z dodatkiem butelkowej zieleni
+![Homepage](https://via.placeholder.com/800x400.png?text=Homepage+Screenshot)
+*Homepage showcasing the latest job listings.*
 
----
+![CV Generator](https://via.placeholder.com/800x400.png?text=CV+Generator+Screenshot)
+*User-friendly CV generation interface.*
 
-### Query 4
-
-> Dopisz do about treść z pliku index.html. Masz dopisać tylko to co jest widoczne (bez header i footer).
-
----
-
-### Query 5
-
-> Zapisz w js w obiekcie elementy, które będą uzupełnione zgodnie z plikiem json (bez header i footer). Pisz tylko te, które są nowe.
 
 ---
 
-### Query 6
+## 📈 Future Enhancements
 
-> Przetłumacz na polski ale tylko treść (plik en.json)
-
-### Query 7
-
-> Usuń TYLKO treść (nie usuwaj klas, id, zdjęć, itp)
-
----
-
-### Query 8
-
-> Popraw kod przewijania daily ofert na telefonie
+- **Backend Integration**: Connect to a database for dynamic job postings.
+- **User Authentication**: Allow users to create accounts and save preferences.
+- **Advanced Search Filters**: Enable users to filter job listings based on various criteria.
+- **Multi-language Support**: Cater to a broader audience by supporting multiple languages.
 
 ---
 
-### Query 9
+## 🤝 Contributing
 
-> Wygeneruj opis do strony [projekt-wit-portal.ct8.pl](projekt-wit-portal.ct8.pl)
+Contributions are welcome! If you'd like to enhance the platform or fix issues:
 
----
-
-### Query 10
-
-> Wygeneruj mój opis w 3 zdaniach
-
----
-
-### Query 11
-
-> Zoptymalizuj działanie funkcji (usuń niepotrzebne stałe/zmienne): fillAboutPage, fillCreatorPage, fillHomePage, fillLoginPage, itd..
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/YourFeature`
+3. Commit your changes: `git commit -m 'Add YourFeature'`
+4. Push to the branch: `git push origin feature/YourFeature`
+5. Open a pull request.
 
 ---
 
-### Query 12
+## 📬 Contact
 
-> Wygeneruj politykę prywatności i regulamin korzystania ze strony: projekt-wit-portal.ct8.pl.
+For any inquiries or feedback:
+
+- **Email**: [konradmalinowski@zsezdw.onmicrosoft.com](mailto:konradmalinowski@zsezdw.onmicrosoft.com)
+- **GitHub**: [@konradxmalinowski](https://github.com/konradxmalinowski)
+- **Instagram**: [@konradxmalinowski](https://www.instagram.com/konradxmalinowski/)
+- **Facebook**: [Konrad Malinowski](https://www.facebook.com/konradxmalinowski/)
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+
+
