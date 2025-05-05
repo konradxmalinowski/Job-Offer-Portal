@@ -36,17 +36,6 @@
 
 ---
 
-## 📸 Screenshots
-
-![Homepage](https://via.placeholder.com/800x400.png?text=Homepage+Screenshot)
-*Homepage showcasing the latest job listings.*
-
-![CV Generator](https://via.placeholder.com/800x400.png?text=CV+Generator+Screenshot)
-*User-friendly CV generation interface.*
-
-
----
-
 ## 📈 Future Enhancements
 
 - **Backend Integration**: Connect to a database for dynamic job postings.
