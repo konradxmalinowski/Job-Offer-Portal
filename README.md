@@ -1,15 +1,4 @@
 <h1 align="center">💼 Job Offer Portal</h1>
-<p align="center">
-  <a href="https://projekt-wit-portal.ct8.pl" target="_blank">
-    <img src="https://img.shields.io/badge/Live%20Demo-Available-brightgreen?style=for-the-badge" alt="Live Demo">
-  </a>
-  <a href="https://github.com/konradxmalinowski/Portal-z-ofertami-o-prace" target="_blank">
-    <img src="https://img.shields.io/github/stars/konradxmalinowski/Portal-z-ofertami-o-prace?style=for-the-badge" alt="GitHub Stars">
-  </a>
-</p>
-
----
-
 ## 📌 Overview
 
 **Job Offer Portal** is a modern web application designed to streamline the job search process. It offers users the ability to browse the latest job listings and generate professional CVs effortlessly. The platform emphasizes user experience with an intuitive interface and responsive design.
