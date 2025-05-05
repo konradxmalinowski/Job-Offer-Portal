@@ -1,5 +1,4 @@
 <h1 align="center">💼 Job Offer Portal</h1>
-## 📌 Overview
 
 **Job Offer Portal** is a modern web application designed to streamline the job search process. It offers users the ability to browse the latest job listings and generate professional CVs effortlessly. The platform emphasizes user experience with an intuitive interface and responsive design.
 
