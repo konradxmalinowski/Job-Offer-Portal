@@ -24,15 +24,6 @@
 
 ---
 
-## 📈 Future Enhancements
-
-- **Backend Integration**: Connect to a database for dynamic job postings.
-- **User Authentication**: Allow users to create accounts and save preferences.
-- **Advanced Search Filters**: Enable users to filter job listings based on various criteria.
-- **Multi-language Support**: Cater to a broader audience by supporting multiple languages.
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome! If you'd like to enhance the platform or fix issues:
@@ -49,10 +40,7 @@ Contributions are welcome! If you'd like to enhance the platform or fix issues:
 
 For any inquiries or feedback:
 
-- **Email**: [konradmalinowski@zsezdw.onmicrosoft.com](mailto:konradmalinowski@zsezdw.onmicrosoft.com)
-- **GitHub**: [@konradxmalinowski](https://github.com/konradxmalinowski)
-- **Instagram**: [@konradxmalinowski](https://www.instagram.com/konradxmalinowski/)
-- **Facebook**: [Konrad Malinowski](https://www.facebook.com/konradxmalinowski/)
+- **Email**: [malinowski.konrad45@gmail.com](mailto:malinowski.konrad45@gmail.com)
 
 ---
 
