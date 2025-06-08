@@ -1,10 +1,10 @@
-<h1 align="center">💼 Job Offer Portal</h1>
+<h1>💼 Job Offer Portal</h1>
 
 **Job Offer Portal** is a modern web application designed to streamline the job search process. It offers users the ability to browse the latest job listings and generate professional CVs effortlessly. The platform emphasizes user experience with an intuitive interface and responsive design.
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Dynamic Job Listings**: Stay updated with the latest job opportunities.
 - **CV Generator**: Create and download a professional CV in minutes.
@@ -15,7 +15,7 @@
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠Technologies Used
 
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
 - **Design Tools**: Figma
@@ -24,7 +24,7 @@
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! If you'd like to enhance the platform or fix issues:
 
@@ -36,7 +36,7 @@ Contributions are welcome! If you'd like to enhance the platform or fix issues:
 
 ---
 
-## 📬 Contact
+## Contact
 
 For any inquiries or feedback:
 
@@ -44,7 +44,7 @@ For any inquiries or feedback:
 
 ---
 
-## 📄 License
+## License
 
 ```
 MIT License
